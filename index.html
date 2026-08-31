@@ -1,0 +1,2224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Nisha Tank is a UK-based digital marketer turning audience insight into memorable campaigns, measurable growth and meaningful brand experiences.">
+  <meta name="theme-color" content="#0b1f33">
+  <meta property="og:title" content="Nisha Tank — Digital Marketing Portfolio">
+  <meta property="og:description" content="Creative marketing, built to be remembered. Explore Nisha's selected impact, experience and capabilities.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nisha Tank — Digital Marketing Portfolio">
+  <meta name="twitter:description" content="Creative marketing, built to be remembered. Explore Nisha's selected impact, experience and capabilities.">
+  <meta name="twitter:image" content="assets/og.png">
+  <title>Nisha Tank | Digital Marketing Portfolio</title>
+  <style>
+    :root {
+      --navy: #0b1f33;
+      --navy-soft: #153a59;
+      --ivory: #f8f5ef;
+      --paper: #fffdf9;
+      --coral: #ff6b5f;
+      --teal: #2ec4b6;
+      --gold: #f4c95d;
+      --ink-muted: #526476;
+      --line: rgba(11, 31, 51, .14);
+      --shadow: 0 24px 70px rgba(11, 31, 51, .13);
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--navy);
+      background: var(--ivory);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    body.menu-open { overflow: hidden; }
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    ::selection { background: var(--gold); color: var(--navy); }
+    .skip-link {
+      position: fixed; left: 1rem; top: -5rem; z-index: 1000;
+      padding: .75rem 1rem; color: white; background: var(--navy);
+      border-radius: 999px; transition: top .2s ease;
+    }
+    .skip-link:focus { top: 1rem; }
+
+    .site-header {
+      position: sticky; top: 0; z-index: 100;
+      border-bottom: 1px solid rgba(11, 31, 51, .1);
+      background: rgba(248, 245, 239, .88);
+      backdrop-filter: blur(18px);
+    }
+    .nav {
+      width: min(1180px, calc(100% - 2rem)); min-height: 72px; margin-inline: auto;
+      display: flex; align-items: center; justify-content: space-between; gap: 2rem;
+    }
+    .brand {
+      display: inline-flex; align-items: center; gap: .7rem;
+      text-decoration: none; font-weight: 800; letter-spacing: -.02em;
+    }
+    .brand-mark {
+      width: 36px; height: 36px; display: grid; place-items: center;
+      border-radius: 50%; color: white; background: var(--navy);
+      font-family: var(--serif); font-size: 1rem; box-shadow: 6px 6px 0 var(--coral);
+    }
+    .nav-links {
+      display: flex; align-items: center; gap: 1rem;
+      margin: 0; padding: 0; list-style: none;
+    }
+    .nav-links a {
+      position: relative; text-decoration: none;
+      font-size: .8rem; font-weight: 750; letter-spacing: .035em;
+    }
+    .nav-links a:not(.nav-cta)::after {
+      content: ""; position: absolute; left: 0; bottom: -.35rem;
+      width: 100%; height: 2px; background: var(--coral);
+      transform: scaleX(0); transform-origin: right; transition: transform .22s ease;
+    }
+    .nav-links a:hover::after, .nav-links a.active::after {
+      transform: scaleX(1); transform-origin: left;
+    }
+    .nav-cta {
+      padding: .65rem 1rem; border: 1px solid var(--navy); border-radius: 999px;
+    }
+    .menu-button {
+      display: none; width: 44px; height: 44px; border: 0; border-radius: 50%;
+      color: white; background: var(--navy); font: inherit; cursor: pointer;
+    }
+
+    main { overflow: hidden; }
+    .container { width: min(1180px, calc(100% - 2rem)); margin-inline: auto; }
+    section { scroll-margin-top: 84px; }
+    .hero {
+      position: relative; min-height: calc(100svh - 72px);
+      display: grid; align-items: center; padding: clamp(4rem, 8vw, 7.5rem) 0 5rem;
+    }
+    .hero::before {
+      content: ""; position: absolute; width: 340px; height: 340px;
+      left: -170px; bottom: -80px; border: 70px solid var(--teal);
+      border-radius: 50%; opacity: .16; pointer-events: none;
+    }
+    .hero-grid {
+      display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(340px, .92fr);
+      align-items: center; gap: clamp(2.8rem, 7vw, 7.5rem);
+    }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: .7rem; margin: 0 0 1.2rem;
+      font-size: .76rem; font-weight: 850; letter-spacing: .17em; text-transform: uppercase;
+    }
+    .eyebrow::before { content: ""; width: 34px; height: 3px; background: var(--coral); }
+    .hero .eyebrow { font-size: clamp(.98rem, 1.35vw, 1.14rem); letter-spacing: .12em; }
+    .hero .eyebrow strong { color: var(--coral); font-weight: 900; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3 { text-wrap: balance; }
+    h1 {
+      max-width: 790px; margin-bottom: 1.55rem; font-family: var(--serif);
+      font-size: clamp(3.5rem, 7.4vw, 6.9rem); font-weight: 500;
+      line-height: .91; letter-spacing: -.06em;
+    }
+    h1 em { color: var(--coral); font-weight: 500; }
+    .hero-copy {
+      max-width: 650px; margin-bottom: 1.1rem; color: var(--ink-muted);
+      font-size: clamp(1.05rem, 1.8vw, 1.25rem); line-height: 1.65;
+    }
+    .hero-copy strong { color: var(--navy); }
+    .hero-work-status {
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      gap: .7rem;
+      margin: 0 0 1.5rem;
+      padding: .7rem .9rem;
+      border: 1px solid rgba(11,31,51,.16);
+      border-radius: .85rem;
+      color: var(--navy);
+      background: white;
+      box-shadow: 0 10px 28px rgba(11,31,51,.07);
+      font-size: .78rem;
+      font-weight: 780;
+      line-height: 1.35;
+    }
+    .hero-work-status .status-dot { flex: 0 0 auto; }
+    .button-row { display: flex; flex-wrap: wrap; gap: .85rem; }
+    .button {
+      min-height: 52px; display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+      padding: .8rem 1.2rem; border: 1px solid var(--navy); border-radius: 999px;
+      text-decoration: none; font-weight: 800;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+    .button:hover { transform: translateY(-3px); box-shadow: 0 10px 0 rgba(11, 31, 51, .1); }
+    .button-primary { color: white; background: var(--navy); }
+    .button-secondary { background: transparent; }
+    .button-arrow { font-size: 1.2rem; line-height: 1; }
+
+    .portrait-stage {
+      position: relative; width: min(100%, 480px); margin-inline: auto;
+      padding: 1rem 1.2rem 1.4rem;
+    }
+    .portrait-stage::before {
+      content: ""; position: absolute; inset: 5% 8% -2% -2%;
+      border-radius: 48% 48% 2rem 2rem; background: var(--teal); transform: rotate(-4deg);
+    }
+    .portrait-stage::after {
+      content: ""; position: absolute; width: 110px; height: 110px; right: -2%; top: -4%;
+      border: 18px solid var(--gold); border-radius: 50%; z-index: 0;
+    }
+    .portrait-frame {
+      position: relative; z-index: 1; aspect-ratio: 4 / 5; overflow: hidden;
+      border: 10px solid var(--paper); border-radius: 48% 48% 2rem 2rem;
+      background: var(--paper); box-shadow: var(--shadow);
+    }
+    .portrait-frame img {
+      width: 100%; height: 100%; object-fit: cover; object-position: 51% 45%;
+    }
+    .hello-card, .impact-card {
+      position: absolute; z-index: 2; border-radius: 1rem; box-shadow: var(--shadow);
+    }
+    .hello-card {
+      left: -6%; top: 14%; padding: .75rem 1rem; color: var(--navy); background: var(--gold);
+      font-family: var(--serif); font-size: 1.04rem; font-style: italic; transform: rotate(-4deg);
+    }
+    .impact-card {
+      right: -7%; bottom: 8%; min-width: 170px; padding: 1rem 1.15rem;
+      color: white; background: var(--navy);
+    }
+    .impact-card strong {
+      display: block; color: var(--teal); font-family: var(--serif);
+      font-size: 2.05rem; line-height: 1;
+    }
+    .impact-card span { font-size: .78rem; font-weight: 700; letter-spacing: .04em; }
+
+    .proof-strip { padding: .8rem 0; color: white; background: var(--navy); }
+    .proof-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: .8rem; }
+    .proof {
+      position: relative; min-height: 178px; display: flex; flex-direction: column; justify-content: center;
+      overflow: hidden; padding: 1.7rem clamp(1rem, 2.6vw, 2rem);
+      border: 1px solid rgba(255,255,255,.14); border-radius: 1.2rem;
+      background: rgba(255,255,255,.045); isolation: isolate;
+      transition: transform .28s ease, background .28s ease, box-shadow .28s ease;
+    }
+    .proof::after {
+      content: ""; position: absolute; width: 120px; height: 120px; right: -70px; bottom: -70px;
+      border: 20px solid var(--teal); border-radius: 50%; opacity: 0; z-index: -1;
+      transition: opacity .28s ease, transform .28s ease;
+    }
+    .proof:hover, .proof:focus-within {
+      z-index: 2; transform: translateY(-9px) scale(1.025); background: var(--navy-soft);
+      box-shadow: 0 24px 55px rgba(0,0,0,.3);
+    }
+    .proof:hover::after, .proof:focus-within::after { opacity: .28; transform: translate(-12px, -12px); }
+    .proof-label {
+      display: block; margin-bottom: .6rem; color: var(--teal); font-size: .67rem;
+      font-weight: 900; letter-spacing: .13em; text-transform: uppercase;
+    }
+    .proof strong {
+      color: var(--gold); font-family: var(--serif);
+      font-size: clamp(2.2rem, 4.2vw, 3.75rem); font-weight: 500; line-height: 1;
+    }
+    .proof strong.proof-word { font-size: clamp(1.85rem, 3vw, 2.65rem); letter-spacing: -.03em; }
+    .proof-copy {
+      max-width: 24ch; margin-top: .6rem; color: rgba(255,255,255,.82);
+      font-size: .82rem; font-weight: 720; line-height: 1.42;
+    }
+    .current-company-logo { width: min(100%, 190px); height: 58px; object-fit: contain; object-position: left center; }
+
+    .toolkit-spotlight {
+      padding: clamp(2.6rem, 5vw, 4rem) 0;
+      color: white;
+      background: var(--navy-soft);
+      border-top: 1px solid rgba(255,255,255,.1);
+    }
+    .toolkit-spotlight-grid {
+      display: grid;
+      grid-template-columns: minmax(230px, .72fr) minmax(0, 1.28fr);
+      gap: clamp(2rem, 6vw, 5rem);
+      align-items: center;
+    }
+    .toolkit-spotlight .section-kicker { color: var(--teal); }
+    .toolkit-spotlight h2 {
+      margin: 0 0 .7rem;
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4.2vw, 3.8rem);
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: -.04em;
+    }
+    .toolkit-spotlight p { margin-bottom: 0; color: rgba(255,255,255,.72); }
+    .spotlight-tools {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: .65rem;
+    }
+    .spotlight-tool {
+      min-height: 112px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: .6rem;
+      padding: .85rem;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 1rem;
+      color: var(--navy);
+      background: white;
+      text-align: center;
+      text-decoration: none;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .spotlight-tool:hover { transform: translateY(-5px); box-shadow: 0 16px 34px rgba(0,0,0,.2); }
+    .spotlight-tool img { width: 42px; height: 42px; object-fit: contain; }
+    .spotlight-tool span { font-size: .7rem; font-weight: 850; line-height: 1.15; }
+
+    .section-pad { padding: clamp(5.5rem, 10vw, 9rem) 0; }
+    .section-kicker {
+      margin: 0 0 .8rem; color: var(--coral); font-size: .75rem;
+      font-weight: 850; letter-spacing: .18em; text-transform: uppercase;
+    }
+    .section-title {
+      max-width: 850px; margin-bottom: 1.2rem; font-family: var(--serif);
+      font-size: clamp(2.65rem, 5vw, 5.25rem); font-weight: 500;
+      line-height: .99; letter-spacing: -.045em;
+    }
+    .section-intro {
+      max-width: 680px; margin-bottom: 3rem; color: var(--ink-muted); font-size: 1.1rem;
+    }
+
+    .about-grid {
+      display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(280px, .65fr);
+      gap: clamp(2.5rem, 7vw, 6rem); align-items: start;
+    }
+    .about-statement {
+      padding-left: 1.6rem; border-left: 5px solid var(--teal);
+      font-family: var(--serif); font-size: clamp(1.55rem, 3vw, 2.5rem); line-height: 1.26;
+    }
+    .about-copy { margin-top: 2rem; }
+    .about-copy p { color: var(--ink-muted); font-size: 1.05rem; }
+    .about-copy p:last-child { margin-bottom: 0; }
+    .about-personal {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2rem, 6vw, 5rem);
+      align-items: center;
+      margin-top: 3rem;
+      padding: clamp(1.6rem, 4vw, 3rem);
+      color: white;
+      background: var(--navy);
+      border-radius: 1.7rem;
+      box-shadow: var(--shadow);
+    }
+    .about-photo {
+      width: 100%;
+      max-width: 430px;
+      justify-self: center;
+      position: sticky;
+      top: 110px;
+      margin: 0;
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      border: 10px solid white;
+      border-radius: 1.35rem;
+      background: white;
+      box-shadow: 0 20px 45px rgba(0,0,0,.2);
+    }
+    .about-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 52%; }
+    .about-personal h3 {
+      margin-bottom: .65rem;
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 3.6rem);
+      font-weight: 500;
+      line-height: 1;
+    }
+    .about-personal p { margin-bottom: 0; color: rgba(255,255,255,.72); }
+    .about-rule {
+      padding-left: 1.5rem;
+      border-left: 5px solid var(--gold);
+      font-family: var(--serif);
+      font-size: clamp(1.35rem, 2.6vw, 2.15rem);
+      font-style: italic;
+      line-height: 1.3;
+    }
+    .principles {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 3rem;
+    }
+    .principle {
+      min-height: 220px; padding: 1.5rem; border: 1px solid var(--line);
+      border-radius: 1.3rem; background: var(--paper);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .principle:hover { transform: translateY(-7px); box-shadow: 0 18px 45px rgba(11,31,51,.1); }
+    .principle-number {
+      display: block; margin-bottom: 2.4rem; color: var(--coral);
+      font-family: var(--serif); font-style: italic;
+    }
+    .principle h3 {
+      margin-bottom: .55rem; font-family: var(--serif); font-size: 1.55rem; font-weight: 500;
+    }
+    .principle p { margin: 0; color: var(--ink-muted); font-size: .93rem; }
+
+    .impact-section { color: white; background: var(--navy); }
+    .impact-section .section-kicker { color: var(--teal); }
+    .impact-section .section-intro { color: rgba(255,255,255,.7); }
+    .work-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1.2rem; }
+    .work-card {
+      position: relative; min-height: 400px; display: flex; flex-direction: column;
+      justify-content: space-between; overflow: hidden;
+      padding: clamp(1.5rem, 3vw, 2.3rem); border: 1px solid rgba(255,255,255,.14);
+      border-radius: 1.5rem; color: var(--navy); isolation: isolate;
+    }
+    .work-card:nth-child(1) { grid-column: span 7; background: var(--teal); }
+    .work-card:nth-child(2) { grid-column: span 5; background: var(--gold); }
+    .work-card:nth-child(3) { grid-column: span 5; background: var(--paper); }
+    .work-card:nth-child(4) { grid-column: span 7; background: var(--coral); }
+    .work-card::after {
+      content: ""; position: absolute; width: 240px; height: 240px;
+      right: -110px; bottom: -120px; border: 36px solid currentColor;
+      border-radius: 50%; opacity: .09; z-index: -1;
+    }
+    .work-meta {
+      display: flex; justify-content: space-between; gap: 1rem;
+      font-size: .7rem; font-weight: 850; letter-spacing: .12em; text-transform: uppercase;
+    }
+    .work-card h3 {
+      max-width: 15ch; margin: 2.5rem 0 .8rem; font-family: var(--serif);
+      font-size: clamp(2rem, 3.3vw, 3.4rem); font-weight: 500;
+      line-height: 1; letter-spacing: -.035em;
+    }
+    .work-card p { max-width: 52ch; margin-bottom: 1.5rem; line-height: 1.55; }
+    .result-line {
+      display: flex; flex-wrap: wrap; align-items: baseline; gap: .65rem;
+      padding-top: 1.1rem; border-top: 1px solid rgba(11,31,51,.22);
+    }
+    .result-line strong {
+      font-family: var(--serif); font-size: 2.6rem; font-weight: 500; line-height: 1;
+    }
+    .result-line span { font-size: .8rem; font-weight: 800; }
+
+    .feature-case {
+      margin-top: 3.2rem;
+      padding: clamp(1.35rem, 4vw, 3.4rem);
+      color: var(--navy);
+      background: var(--paper);
+      border-radius: 2rem;
+      box-shadow: 0 30px 80px rgba(0,0,0,.2);
+    }
+    .case-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .case-company-lockup { display: flex; align-items: center; gap: 1rem; margin: .8rem 0 .35rem; }
+    .case-company-logo {
+      width: 142px;
+      height: 52px;
+      padding: .4rem .55rem;
+      object-fit: contain;
+      border-radius: .75rem;
+      background: var(--navy);
+    }
+    .current-label {
+      display: inline-flex;
+      align-items: center;
+      gap: .55rem;
+      margin-bottom: .85rem;
+      color: #087d73;
+      font-size: .72rem;
+      font-weight: 850;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+    .current-label::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--teal);
+      box-shadow: 0 0 0 5px rgba(46,196,182,.16);
+    }
+    .case-header h3 {
+      max-width: 760px;
+      margin-bottom: .5rem;
+      font-family: var(--serif);
+      font-size: clamp(2.45rem, 5vw, 5rem);
+      font-weight: 500;
+      line-height: .95;
+      letter-spacing: -.045em;
+    }
+    .case-role { margin: 0; color: var(--ink-muted); font-weight: 750; }
+    .case-number {
+      flex: 0 0 auto;
+      color: var(--coral);
+      font-family: var(--serif);
+      font-size: 4rem;
+      font-style: italic;
+      line-height: 1;
+    }
+    .case-summary {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: clamp(2rem, 6vw, 6rem);
+      padding: clamp(2rem, 5vw, 4rem) 0;
+      align-items: start;
+    }
+    .case-quote {
+      margin: 0;
+      padding-left: 1.4rem;
+      border-left: 5px solid var(--coral);
+      font-family: var(--serif);
+      font-size: clamp(1.6rem, 3vw, 2.65rem);
+      line-height: 1.2;
+    }
+    .case-copy p { color: var(--ink-muted); font-size: 1.04rem; }
+    .case-copy strong { color: var(--navy); }
+    .case-tags { display: flex; flex-wrap: wrap; gap: .55rem; margin-top: 1.3rem; }
+    .case-tag {
+      padding: .55rem .75rem;
+      border-radius: 999px;
+      color: var(--navy);
+      background: #e8f5f2;
+      font-size: .78rem;
+      font-weight: 800;
+    }
+    .evidence-title {
+      display: flex;
+      align-items: center;
+      gap: .7rem;
+      margin: 0 0 1rem;
+      font-size: .75rem;
+      font-weight: 850;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+    .evidence-title::before { content: "↗"; color: var(--coral); font-size: 1.1rem; }
+    .evidence-grid {
+      display: grid;
+      grid-template-columns: 1.3fr .7fr;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .evidence-card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 1.35rem;
+      background: white;
+    }
+    .evidence-image {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: var(--navy);
+    }
+    .evidence-image img { width: 100%; height: 100%; object-fit: cover; }
+    .evidence-body { padding: 1.35rem; }
+    .evidence-body h4 {
+      margin: 0 0 .5rem;
+      font-family: var(--serif);
+      font-size: 1.7rem;
+      font-weight: 500;
+      line-height: 1.1;
+    }
+    .evidence-body p { margin-bottom: 1rem; color: var(--ink-muted); font-size: .92rem; }
+    .evidence-link {
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      color: var(--navy);
+      font-size: .78rem;
+      font-weight: 850;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+    }
+    .journey-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1.6rem;
+      color: white;
+      background: var(--navy);
+      border-radius: 1.35rem;
+    }
+    .journey-card p { color: rgba(255,255,255,.72); }
+    .journey-list { display: grid; gap: .8rem; margin: 1.2rem 0 0; padding: 0; list-style: none; }
+    .journey-list li { display: flex; gap: .6rem; font-size: .88rem; font-weight: 700; }
+    .journey-list li::before { content: "✦"; color: var(--gold); }
+
+    .campaign-showcase {
+      margin-top: 1rem;
+      padding: clamp(1.3rem, 4vw, 2.6rem);
+      border: 1px solid var(--line);
+      border-radius: 1.35rem;
+      background: #f7efe5;
+    }
+    .design-preview-link {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1.2rem;
+      align-items: center;
+      margin-top: 1rem;
+      padding: 1.25rem 1.4rem;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 1.1rem;
+      color: white;
+      background: rgba(255,255,255,.07);
+      text-decoration: none;
+    }
+    .design-preview-link strong { display: block; font-family: var(--serif); font-size: 1.35rem; font-weight: 500; }
+    .design-preview-link span { color: rgba(255,255,255,.68); font-size: .82rem; }
+    .design-preview-link b { color: var(--gold); font-size: 1.5rem; }
+    .creative-work-section { background: var(--paper); }
+    .creative-directory { display: grid; gap: 1.2rem; }
+    .creative-blog {
+      overflow: hidden;
+      padding: clamp(1.3rem, 4vw, 2.6rem);
+      border: 1px solid var(--line);
+      border-radius: 1.5rem;
+      background: #f7efe5;
+      box-shadow: 0 20px 55px rgba(11,31,51,.07);
+    }
+    .creative-blog-head {
+      display: grid;
+      grid-template-columns: .82fr 1.18fr;
+      gap: clamp(1.5rem, 5vw, 4rem);
+      align-items: end;
+      margin-bottom: 1.5rem;
+    }
+    .creative-blog-head h3 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(2.25rem, 4.5vw, 4.2rem);
+      font-weight: 500;
+      line-height: .96;
+      letter-spacing: -.04em;
+    }
+    .creative-blog-head p { margin: 0; color: var(--ink-muted); }
+    .design-format {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      margin-bottom: .7rem;
+      color: var(--coral);
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .design-format::before { content: ""; width: 22px; height: 2px; background: currentColor; }
+    .creative-blog .campaign-role { margin-top: 1.2rem; }
+    .brochure-directory { display: grid; gap: 1rem; }
+    .brochure-directory .brochure-proof { margin-top: 0; }
+    .creative-blog-dark { color: white; background: var(--navy); }
+    .creative-blog-dark .creative-blog-head p { color: rgba(255,255,255,.7); }
+    .creative-blog-dark .design-format { color: var(--teal); }
+    .creative-blog-dark .brochure-proof { border: 1px solid rgba(255,255,255,.15); background: rgba(255,255,255,.06); }
+    .radio-work-section { background: #f7efe5; }
+    .radio-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .radio-case {
+      min-height: 100%;
+      padding: clamp(1.3rem, 3vw, 2rem);
+      border: 1px solid var(--line);
+      border-radius: 1.35rem;
+      background: white;
+    }
+    .radio-case h3 { margin-bottom: .55rem; font-family: var(--serif); font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 500; line-height: 1.03; }
+    .radio-case > p { color: var(--ink-muted); }
+    .radio-case .audio-grid { grid-template-columns: 1fr; }
+    .radio-case--house { color: white; background: var(--navy); }
+    .radio-case--house > p { color: rgba(255,255,255,.72); }
+    .radio-station {
+      display: inline-flex;
+      margin: .3rem 0 1rem;
+      padding: .55rem .8rem;
+      border-radius: 999px;
+      color: var(--navy);
+      background: var(--gold);
+      font-size: .76rem;
+      font-weight: 900;
+    }
+    .radio-video-link {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      margin-top: 1.25rem;
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 1rem;
+      color: white;
+      background: #050b11;
+      text-decoration: none;
+    }
+    .radio-video-link img { width: 100%; aspect-ratio: 16 / 7; object-fit: cover; opacity: .68; transition: opacity .2s ease, transform .2s ease; }
+    .radio-video-link:hover img { opacity: .82; transform: scale(1.02); }
+    .radio-video-label { position: absolute; inset: auto 1rem 1rem; display: flex; align-items: center; gap: .7rem; font-size: .78rem; font-weight: 900; }
+    .radio-play { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 50%; color: var(--navy); background: var(--gold); }
+    .campaign-head {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: clamp(1.5rem, 5vw, 4rem);
+      align-items: end;
+      margin-bottom: 1.5rem;
+    }
+    .campaign-head h4 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      font-weight: 500;
+      line-height: 1;
+    }
+    .campaign-head p { margin: 0; color: var(--ink-muted); }
+    .campaign-grid {
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 1rem;
+    }
+    .campaign-art {
+      overflow: hidden;
+      border-radius: 1.1rem;
+      background: white;
+      box-shadow: 0 16px 38px rgba(11,31,51,.12);
+    }
+    .campaign-art img { width: 100%; height: 100%; object-fit: cover; }
+    .campaign-art-wide { aspect-ratio: 1.42 / 1; }
+    .campaign-art-portrait { aspect-ratio: .7 / 1; }
+    .campaign-caption { display: flex; justify-content: space-between; gap: 1rem; padding: .85rem 1rem; font-size: .78rem; font-weight: 850; }
+    .campaign-art-wrap { display: flex; flex-direction: column; }
+    .campaign-art-wrap .campaign-art { flex: 1; }
+    .campaign-role {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: .8rem;
+      margin-top: 1rem;
+    }
+    .role-note {
+      padding: 1.1rem;
+      border-radius: 1rem;
+      background: white;
+    }
+    .role-note strong { display: block; margin-bottom: .25rem; font-family: var(--serif); font-size: 1.25rem; font-weight: 500; }
+    .role-note span { color: var(--ink-muted); font-size: .82rem; }
+    .brochure-proof {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1rem;
+      padding: 1rem;
+      color: white;
+      background: var(--navy);
+      border-radius: 1.2rem;
+    }
+    .brochure-images { display: grid; grid-template-columns: 1fr 1fr; gap: .65rem; }
+    .brochure-images-single { grid-template-columns: minmax(0, 420px); justify-content: center; }
+    .brochure-images img { width: 100%; height: 100%; min-height: 180px; object-fit: contain; border-radius: .8rem; background: white; }
+    .brochure-copy { display: flex; flex-direction: column; justify-content: center; padding: .6rem; }
+    .brochure-copy h4 { margin-bottom: .55rem; font-family: var(--serif); font-size: 2rem; font-weight: 500; line-height: 1.05; }
+    .brochure-copy p { color: rgba(255,255,255,.7); font-size: .9rem; }
+    .brochure-copy .evidence-link { color: var(--gold); }
+    .audio-showcase {
+      margin-top: 1rem;
+      padding: clamp(1.2rem, 3vw, 1.7rem);
+      border: 1px solid rgba(11,31,51,.14);
+      border-radius: 1.2rem;
+      background: white;
+    }
+    .audio-showcase-head { display: grid; grid-template-columns: .8fr 1.2fr; gap: 1.5rem; align-items: end; margin-bottom: 1rem; }
+    .audio-showcase h4 { margin: 0; font-family: var(--serif); font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 500; line-height: 1.05; }
+    .audio-showcase-head p { margin: 0; color: var(--ink-muted); font-size: .9rem; }
+    .audio-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; }
+    .audio-card { padding: 1rem; border-radius: 1rem; color: white; background: var(--navy); }
+    .audio-card strong { display: block; margin-bottom: .15rem; font-family: var(--serif); font-size: 1.2rem; font-weight: 500; }
+    .audio-card span { display: block; margin-bottom: .75rem; color: rgba(255,255,255,.65); font-size: .75rem; }
+    .audio-card audio { width: 100%; display: block; accent-color: var(--teal); }
+    .chapter-head { margin-top: clamp(4rem, 8vw, 7rem); }
+    .chapter-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    .chapter-card {
+      min-height: 260px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1.6rem;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 1.3rem;
+      background: rgba(255,255,255,.06);
+    }
+    .chapter-card:nth-child(2), .chapter-card:nth-child(3) { background: rgba(46,196,182,.1); }
+    .chapter-company { display: flex; align-items: center; gap: .9rem; margin: .95rem 0 .65rem; }
+    .chapter-card .chapter-company h3 { margin: 0; }
+    .chapter-logo-shell {
+      width: 78px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      overflow: hidden;
+      padding: .4rem;
+      border-radius: .75rem;
+      color: var(--navy);
+      background: white;
+    }
+    .chapter-logo { width: 100%; height: 100%; object-fit: contain; }
+    .chapter-wordmark { font-size: .75rem; font-weight: 900; letter-spacing: .08em; text-align: center; }
+    .chapter-meta { color: var(--teal); font-size: .7rem; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
+    .chapter-card h3 { margin: 1.5rem 0 .55rem; font-family: var(--serif); font-size: 1.8rem; font-weight: 500; }
+    .chapter-card p { margin: 0; color: rgba(255,255,255,.7); font-size: .9rem; }
+    .chapter-result { margin-top: 1.3rem; color: var(--gold); font-size: .82rem; font-weight: 850; }
+    .proof-source {
+      display: inline-flex;
+      margin-top: 1.2rem;
+      color: rgba(255,255,255,.72);
+      font-size: .78rem;
+      font-weight: 800;
+      text-underline-offset: 4px;
+    }
+
+    .brands-section { background: #efe9df; }
+    .brands-intro {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: clamp(2rem, 7vw, 7rem);
+      align-items: end;
+      margin-bottom: 3rem;
+    }
+    .brands-intro .section-title { margin-bottom: 0; }
+    .brands-intro-copy {
+      margin: 0;
+      color: var(--ink-muted);
+      font-size: 1.05rem;
+    }
+    .brand-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    .brand-card {
+      position: relative;
+      min-height: 410px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      padding: clamp(1.4rem, 3vw, 2.2rem);
+      border: 1px solid var(--line);
+      border-radius: 1.5rem;
+      isolation: isolate;
+    }
+    .brand-card:nth-child(1) { color: white; background: var(--navy); }
+    .brand-card:nth-child(2) { background: var(--gold); }
+    .brand-card:nth-child(3) { background: var(--teal); }
+    .brand-card:nth-child(4) { background: var(--coral); }
+    .brand-card:nth-child(5) { color: white; background: var(--navy-soft); }
+    .brand-card:nth-child(6) { background: #d8ccf4; }
+    .brand-card::after {
+      content: "";
+      position: absolute;
+      width: 190px;
+      height: 190px;
+      right: -70px;
+      bottom: -100px;
+      border: 26px solid currentColor;
+      border-radius: 50%;
+      opacity: .09;
+      z-index: -1;
+    }
+    .brand-index {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: .7rem;
+      font-weight: 850;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+    }
+    .brand-card h3 {
+      max-width: 13ch;
+      margin: 1.25rem 0 .45rem;
+      font-family: var(--serif);
+      font-size: clamp(2.2rem, 4vw, 4rem);
+      font-weight: 500;
+      line-height: .95;
+      letter-spacing: -.045em;
+    }
+    .brand-logo-shell {
+      width: min(100%, 270px);
+      height: 112px;
+      display: grid;
+      place-items: center;
+      margin-top: 1.5rem;
+      padding: .55rem;
+      border: 1px solid rgba(11,31,51,.12);
+      border-radius: .85rem;
+      background: white;
+      box-shadow: 0 12px 28px rgba(11,31,51,.09);
+      overflow: hidden;
+    }
+    .brand-logo-shell-dark { background: var(--navy-soft); border-color: rgba(255,255,255,.16); }
+    .brand-logo { width: 100%; height: 100%; object-fit: contain; object-position: center; }
+    .brand-logo--taj { width: auto; height: auto; max-width: 74%; max-height: 74%; }
+    .brand-logo--house { width: auto; height: auto; max-width: 78px; max-height: 78px; }
+    .brand-card--wonder { color: white; background: #d71920 !important; }
+    .brand-card--wonder .brand-logo-shell { background: #d71920; border-color: rgba(255,255,255,.34); box-shadow: none; }
+    .brand-card--wonder .brand-index, .brand-card--wonder p { color: white; opacity: 1; }
+    .brand-card p { margin: 0; font-size: .86rem; font-weight: 750; opacity: .78; }
+    .brand-footnote {
+      margin: 1.2rem 0 0;
+      color: var(--ink-muted);
+      font-size: .84rem;
+      font-style: italic;
+    }
+    .brand-link { height: 100%; display: flex; flex-direction: column; justify-content: space-between; color: inherit; text-decoration: none; }
+    .brand-link::after { content: "Visit brand ↗"; display: inline-block; margin-top: 1rem; font-size: .72rem; font-weight: 850; text-decoration: underline; text-underline-offset: 4px; }
+    .contribution-section-head {
+      margin-top: clamp(4rem, 7vw, 6rem);
+      padding-top: 2rem;
+      border-top: 1px solid var(--line);
+    }
+    .contribution-section-head .section-title { max-width: 920px; margin-bottom: 1.6rem; }
+    .brand-contributions {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .contribution-card {
+      padding: clamp(1.4rem, 3vw, 2.2rem);
+      border: 1px solid var(--line);
+      border-radius: 1.35rem;
+      background: var(--paper);
+    }
+    .contribution-card:first-child { color: white; background: var(--navy); }
+    .contribution-card h3 { margin-bottom: .7rem; font-family: var(--serif); font-size: clamp(1.7rem, 3vw, 2.5rem); font-weight: 500; line-height: 1.05; }
+    .contribution-card p { margin-bottom: 0; color: var(--ink-muted); }
+    .contribution-card:first-child p { color: rgba(255,255,255,.72); }
+    .contribution-brand { display: flex; align-items: center; gap: .85rem; margin-bottom: 1.2rem; font-weight: 900; }
+    .contribution-logo-shell {
+      width: 168px;
+      height: 92px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      padding: .45rem;
+      border-radius: .75rem;
+      background: white;
+      box-shadow: 0 10px 24px rgba(11,31,51,.1);
+      overflow: hidden;
+    }
+    .contribution-logo { width: 100%; height: 100%; object-fit: contain; object-position: center; }
+    .contribution-logo--taj { width: auto; height: auto; max-width: 72%; max-height: 72%; }
+    .campaign-names { display: flex; flex-wrap: wrap; gap: .55rem; margin-bottom: 1.2rem; }
+    .campaign-name { padding: .52rem .7rem; border-radius: 999px; color: var(--navy); background: var(--gold); font-size: .75rem; font-weight: 850; }
+
+    .portfolio-campaigns { background: var(--paper); }
+    .campaign-stack { display: grid; gap: 1.15rem; }
+    .campaign-feature {
+      overflow: hidden; border: 1px solid var(--line); border-radius: 1.6rem;
+      background: white; box-shadow: 0 18px 55px rgba(11,31,51,.08);
+    }
+    .campaign-feature-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; }
+    .campaign-feature.reverse .campaign-media { order: 2; }
+    .campaign-copy { display: flex; flex-direction: column; justify-content: center; padding: clamp(1.6rem, 4vw, 3rem); }
+    .campaign-brandline {
+      display: flex; flex-wrap: wrap; align-items: center; gap: .55rem; margin-bottom: .85rem;
+      color: var(--coral); font-size: .7rem; font-weight: 900; letter-spacing: .13em; text-transform: uppercase;
+    }
+    .campaign-brandline::before { content: ""; width: 28px; height: 3px; background: currentColor; }
+    .campaign-copy h3, .campaign-heading h3 {
+      margin-bottom: .7rem; font-family: var(--serif); font-size: clamp(2.1rem, 4.3vw, 4rem);
+      font-weight: 500; line-height: .96; letter-spacing: -.04em;
+    }
+    .campaign-subtitle { margin-bottom: 1.1rem; color: var(--ink-muted); font-weight: 750; }
+    .campaign-points { display: grid; gap: .72rem; margin: 0; padding: 0; list-style: none; }
+    .campaign-points li { position: relative; padding-left: 1.35rem; color: var(--ink-muted); font-size: .92rem; line-height: 1.5; }
+    .campaign-points li::before { content: "✦"; position: absolute; left: 0; color: var(--teal); }
+    .campaign-media { min-height: 100%; background: var(--navy); }
+    .campaign-media iframe { width: 100%; height: 100%; min-height: 390px; display: block; border: 0; }
+    .campaign-proof-link {
+      align-self: flex-start; display: inline-flex; align-items: center; gap: .45rem; margin-top: 1.25rem;
+      color: var(--navy); font-size: .8rem; font-weight: 900; text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+    }
+    .campaign-outcome {
+      align-self: flex-start; display: inline-flex; align-items: baseline; gap: .45rem; margin-top: 1.25rem;
+      padding: .75rem .95rem; border-radius: 999px; color: var(--navy); background: var(--gold);
+      font-weight: 850;
+    }
+    .campaign-outcome strong { font-family: var(--serif); font-size: 1.65rem; font-weight: 500; line-height: 1; }
+    .campaign-group-label {
+      display: flex; align-items: center; gap: .85rem; margin: 2.4rem 0 .2rem;
+      color: var(--navy); font-size: .72rem; font-weight: 900; letter-spacing: .16em; text-transform: uppercase;
+    }
+    .campaign-group-label::after { content: ""; height: 1px; flex: 1; background: var(--line); }
+    .diamond-case { padding: clamp(1.4rem, 4vw, 3rem); background: #f4e6e0; }
+    .diamond-head { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 6vw, 5rem); align-items: end; margin-bottom: 1.4rem; }
+    .diamond-head .campaign-points { align-content: end; }
+    .diamond-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; }
+    .diamond-gallery figure { margin: 0; overflow: hidden; border-radius: 1rem; background: var(--navy); }
+    .diamond-gallery img { width: 100%; height: 100%; object-fit: cover; transition: transform .45s ease; }
+    .diamond-gallery figure:hover img { transform: scale(1.035); }
+    .diamond-wide { grid-column: 1 / -1; aspect-ratio: 3.8 / 1; }
+    .diamond-aparshakti { grid-column: 1 / -1; aspect-ratio: 2.25 / 1; }
+    .diamond-editorial { aspect-ratio: 4 / 4.6; }
+    .symphony-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 1.15rem; }
+    .symphony-grid .campaign-feature { height: 100%; }
+    .symphony-grid .campaign-feature-grid { grid-template-columns: 1fr; height: 100%; }
+    .symphony-grid .campaign-media iframe { min-height: 330px; }
+    .campaign-mini-stack { display: grid; gap: 1.15rem; }
+    .campaign-mini {
+      position: relative; overflow: hidden; padding: 1.55rem; border-radius: 1.45rem;
+      color: white; background: var(--navy); isolation: isolate;
+    }
+    .campaign-mini:nth-child(2) { color: var(--navy); background: var(--teal); }
+    .campaign-mini:nth-child(3) { color: var(--navy); background: var(--gold); }
+    .campaign-mini::after {
+      content: ""; position: absolute; width: 150px; height: 150px; right: -75px; bottom: -85px;
+      border: 24px solid currentColor; border-radius: 50%; opacity: .09; z-index: -1;
+    }
+    .campaign-mini h3 { margin: .8rem 0 .55rem; font-family: var(--serif); font-size: 1.75rem; font-weight: 500; line-height: 1.05; }
+    .campaign-mini p { margin: 0; color: inherit; opacity: .76; font-size: .88rem; line-height: 1.5; }
+    .campaign-mini .campaign-proof-link { color: inherit; }
+    .campaign-stat { display: inline-flex; margin-top: 1rem; padding: .45rem .65rem; border-radius: 999px; color: var(--navy); background: var(--gold); font-size: .75rem; font-weight: 900; }
+
+    .ai-note {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1.2rem;
+      align-items: start;
+      margin-top: 1rem;
+      padding: 1.5rem;
+      color: white;
+      background: var(--navy);
+      border-radius: 1.35rem;
+    }
+    .ai-mark {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: var(--navy);
+      background: var(--gold);
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-style: italic;
+    }
+    .ai-note h3 { margin-bottom: .35rem; font-family: var(--serif); font-size: 1.55rem; font-weight: 500; }
+    .ai-note p { margin: 0; color: rgba(255,255,255,.7); font-size: .9rem; }
+
+    .credential-actions { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.4rem; }
+    .credential-link {
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      padding: .62rem .85rem;
+      border: 1px solid rgba(11,31,51,.22);
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: .78rem;
+      font-weight: 850;
+    }
+
+    .experience-grid {
+      display: grid; grid-template-columns: .7fr 1.3fr;
+      gap: clamp(3rem, 8vw, 7rem); align-items: start;
+    }
+    .experience-aside { position: sticky; top: 110px; }
+    .experience-aside .section-title { font-size: clamp(2.65rem, 4vw, 4.4rem); }
+    .timeline { border-top: 1px solid var(--line); }
+    .role {
+      display: grid; grid-template-columns: 120px 1fr; gap: 1.5rem;
+      padding: 2rem 0; border-bottom: 1px solid var(--line);
+    }
+    .role time {
+      color: var(--coral); font-size: .75rem; font-weight: 850;
+      letter-spacing: .06em; text-transform: uppercase;
+    }
+    .role h3 {
+      margin-bottom: .25rem; font-family: var(--serif);
+      font-size: 1.65rem; font-weight: 500; line-height: 1.15;
+    }
+    .role-company {
+      margin-bottom: .85rem; color: var(--ink-muted);
+      font-size: .85rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase;
+    }
+    .role p { margin-bottom: 0; color: var(--ink-muted); }
+
+    .toolkit { background: #e8f5f2; }
+    .tool-section + .tool-section { margin-top: clamp(3rem, 6vw, 5rem); }
+    .tool-section-head {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 2rem;
+      align-items: end;
+      margin-bottom: 1.4rem;
+    }
+    .tool-section-head h3 { margin: 0; font-family: var(--serif); font-size: clamp(2rem, 3.5vw, 3.2rem); font-weight: 500; line-height: 1; }
+    .tool-section-head p { max-width: 640px; margin: 0; color: var(--ink-muted); }
+    .toolkit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .tool-group {
+      padding: 2rem; border: 1px solid rgba(11,31,51,.12);
+      border-radius: 1.4rem; background: rgba(255,255,255,.65);
+    }
+    .tool-group h3 {
+      margin-bottom: 1.4rem; font-family: var(--serif); font-size: 1.6rem; font-weight: 500;
+    }
+    .chips { display: flex; flex-wrap: wrap; gap: .55rem; }
+    .chip {
+      padding: .55rem .78rem; border: 1px solid rgba(11,31,51,.18);
+      border-radius: 999px; background: white; font-size: .8rem; font-weight: 750;
+    }
+    .tool-logo-wall {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: .8rem;
+    }
+    .tool-tile {
+      min-height: 145px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: .75rem;
+      padding: 1rem;
+      border: 1px solid rgba(11,31,51,.12);
+      border-radius: 1.2rem;
+      background: rgba(255,255,255,.78);
+      text-align: center;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .tool-tile:hover { transform: translateY(-5px); box-shadow: 0 16px 35px rgba(11,31,51,.1); }
+    .tool-icon { width: 58px; height: 58px; object-fit: contain; }
+    .tool-monogram {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      color: white;
+      background: var(--navy);
+      font-family: var(--serif);
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    .tool-monogram.excel { background: #217346; }
+    .tool-monogram.chatgpt { background: #0d766e; }
+    .tool-monogram.gemini { background: linear-gradient(135deg, #4b79f7, #a76de8); }
+    .tool-monogram.figma { background: #f24e1e; }
+    .tool-name { font-size: .78rem; font-weight: 850; line-height: 1.2; }
+    .tool-level { color: var(--ink-muted); font-size: .68rem; font-weight: 700; }
+    .platform-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .platform-cluster {
+      padding: 1.5rem;
+      border: 1px solid rgba(11,31,51,.12);
+      border-radius: 1.2rem;
+      background: rgba(255,255,255,.78);
+    }
+    .platform-cluster h4 { margin: 0 0 1rem; font-family: var(--serif); font-size: 1.35rem; font-weight: 500; }
+    .platform-list { display: flex; flex-wrap: wrap; gap: .55rem; margin: 0; padding: 0; list-style: none; }
+    .platform-list li {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .55rem .75rem;
+      border: 1px solid rgba(11,31,51,.15);
+      border-radius: 999px;
+      color: var(--navy);
+      background: white;
+      font-size: .78rem;
+      font-weight: 800;
+    }
+    .platform-icon { width: 25px; height: 25px; flex: 0 0 auto; object-fit: contain; }
+    .capability-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: .8rem;
+      margin-top: 1.2rem;
+    }
+    .capability-card {
+      min-height: 138px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.1rem;
+      border: 1px solid rgba(11,31,51,.12);
+      border-radius: 1.15rem;
+      background: rgba(255,255,255,.78);
+      font-size: .8rem;
+      font-weight: 850;
+    }
+    .capability-symbol {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: var(--navy);
+      background: var(--gold);
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+    .capability-card:nth-child(2) .capability-symbol,
+    .capability-card:nth-child(5) .capability-symbol { background: var(--teal); }
+    .capability-card:nth-child(3) .capability-symbol { color: white; background: var(--coral); }
+
+    .credentials-grid { display: grid; gap: 1.2rem; align-items: start; }
+    .credential-card {
+      padding: clamp(1.6rem, 4vw, 3rem); border: 1px solid var(--line);
+      border-radius: 1.5rem; background: var(--paper);
+    }
+    .education-card {
+      display: grid;
+      grid-template-columns: 1fr minmax(320px, .72fr);
+      gap: clamp(1.5rem, 4vw, 3.5rem);
+      align-items: center;
+      overflow: hidden;
+      padding: clamp(1.4rem, 3vw, 2.2rem);
+      background: var(--gold);
+    }
+    .university-logo {
+      width: min(100%, 330px);
+      height: 86px;
+      margin-bottom: 1.4rem;
+      object-fit: contain;
+      object-position: left center;
+    }
+    .degree-accreditation {
+      display: grid;
+      grid-template-columns: minmax(150px, 210px) 1fr;
+      gap: 1rem;
+      align-items: center;
+      margin-top: 1.4rem;
+      padding: .9rem 1rem;
+      border: 1px solid rgba(11,31,51,.14);
+      border-radius: 1rem;
+      background: white;
+      box-shadow: 0 12px 30px rgba(11,31,51,.08);
+    }
+    .degree-accreditation img {
+      width: 100%;
+      max-height: 76px;
+      object-fit: contain;
+      object-position: left center;
+    }
+    .degree-accreditation strong {
+      display: block;
+      margin-bottom: .2rem;
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-weight: 600;
+      line-height: 1.15;
+    }
+    .degree-accreditation span { display: block; color: var(--ink-muted); font-size: .77rem; font-weight: 750; line-height: 1.4; }
+    .education-photo {
+      min-height: 500px;
+      margin: 0;
+      overflow: hidden;
+      border-radius: 1.15rem;
+      background: var(--navy);
+      box-shadow: 0 18px 42px rgba(11,31,51,.18);
+    }
+    .education-photo img { width: 100%; height: 100%; min-height: 500px; object-fit: cover; object-position: center 48%; }
+    .credential-card h3 {
+      margin-bottom: .65rem; font-family: var(--serif);
+      font-size: clamp(1.9rem, 3.4vw, 3rem); font-weight: 500; line-height: 1.05;
+    }
+    .credential-card p { margin-bottom: .35rem; }
+    .credential-card small { color: var(--ink-muted); font-weight: 700; }
+    .certificate-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 1.3rem; }
+    .certificate-item {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 1rem;
+      background: white;
+    }
+    .certificate-preview {
+      aspect-ratio: 4 / 3;
+      display: grid;
+      place-items: center;
+      padding: .65rem;
+      border-bottom: 1px solid var(--line);
+      background: #f4f6f8;
+    }
+    .certificate-preview img { width: 100%; height: 100%; object-fit: contain; transition: transform .25s ease; }
+    .certificate-preview:hover img { transform: scale(1.02); }
+    .certificate-details { padding: 1rem; }
+    .certificate-issuer { display: block; margin-bottom: .45rem; color: var(--coral); font-size: .7rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+    .certificate-item h4 { margin: 0 0 .65rem; font-family: var(--serif); font-size: 1.2rem; font-weight: 500; line-height: 1.08; }
+    .certificate-item small { display: block; font-size: .72rem; }
+
+    .contact {
+      position: relative; color: white; background: var(--navy); overflow: hidden;
+    }
+    .contact::before, .contact::after {
+      content: ""; position: absolute; border-radius: 50%; pointer-events: none;
+    }
+    .contact::before {
+      width: 320px; height: 320px; right: -140px; top: -130px;
+      border: 60px solid var(--coral); opacity: .9;
+    }
+    .contact::after {
+      width: 180px; height: 180px; left: -70px; bottom: -80px;
+      background: var(--teal); opacity: .9;
+    }
+    .contact-inner { position: relative; z-index: 1; text-align: center; }
+    .contact .section-kicker { color: var(--gold); }
+    .work-status {
+      width: min(100%, 690px);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1rem;
+      align-items: center;
+      margin: 1.8rem auto 0;
+      padding: 1rem 1.2rem;
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 1rem;
+      background: rgba(255,255,255,.08);
+      text-align: left;
+    }
+    .status-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--teal); box-shadow: 0 0 0 6px rgba(46,196,182,.16); }
+    .work-status strong { display: block; margin-bottom: .2rem; color: var(--gold); font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; }
+    .work-status span:last-child { color: rgba(255,255,255,.78); font-size: .9rem; }
+    .contact .section-title { max-width: 940px; margin-inline: auto; }
+    .contact-copy {
+      max-width: 620px; margin: 0 auto 2rem; color: rgba(255,255,255,.72); font-size: 1.08rem;
+    }
+    .contact .button-primary {
+      color: var(--navy); background: var(--teal); border-color: var(--teal);
+    }
+    .contact .button-secondary { color: white; border-color: rgba(255,255,255,.55); }
+    .contact .button-row { justify-content: center; }
+
+    footer {
+      padding: 1.5rem 0; color: white; background: var(--navy);
+      border-top: 1px solid rgba(255,255,255,.13);
+    }
+    .footer-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem; font-size: .78rem; color: rgba(255,255,255,.62);
+    }
+    .footer-links { display: flex; gap: 1rem; }
+    .footer-links a { color: white; text-decoration: none; }
+    .reveal {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    @media (max-width: 900px) {
+      .menu-button { display: grid; place-items: center; }
+      .nav-links {
+        position: fixed; inset: 72px 0 auto; min-height: calc(100svh - 72px);
+        display: flex; flex-direction: column; align-items: stretch; gap: 0;
+        padding: 2rem; background: var(--ivory); transform: translateX(100%);
+        transition: transform .25s ease;
+      }
+      .nav-links.open { transform: none; }
+      .nav-links li { border-bottom: 1px solid var(--line); }
+      .nav-links a {
+        display: block; padding: 1rem 0; font-family: var(--serif);
+        font-size: 1.6rem; font-weight: 500;
+      }
+      .nav-cta { border: 0; }
+      .hero { min-height: auto; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-content { text-align: center; }
+      .eyebrow { justify-content: center; }
+      .hero-copy { margin-inline: auto; }
+      .button-row { justify-content: center; }
+      .portrait-stage { width: min(86vw, 470px); }
+      .proof-grid { grid-template-columns: repeat(2, 1fr); }
+      .toolkit-spotlight-grid { grid-template-columns: 1fr; }
+      .about-grid, .about-personal, .experience-grid, .credentials-grid { grid-template-columns: 1fr; }
+      .about-photo { position: static; max-width: 520px; }
+      .case-summary, .evidence-grid, .brands-intro, .campaign-head, .brand-contributions,
+      .campaign-feature-grid, .diamond-head, .symphony-grid, .audio-showcase-head,
+      .creative-blog-head, .radio-columns { grid-template-columns: 1fr; }
+      .campaign-feature.reverse .campaign-media { order: initial; }
+      .campaign-media iframe { min-height: 360px; }
+      .case-header { align-items: center; }
+      .case-number { font-size: 3rem; }
+      .experience-aside { position: static; }
+      .principles, .toolkit-grid { grid-template-columns: 1fr; }
+      .tool-section-head, .platform-grid { grid-template-columns: 1fr; }
+      .tool-logo-wall { grid-template-columns: repeat(3, 1fr); }
+      .capability-grid { grid-template-columns: repeat(3, 1fr); }
+      .education-card { grid-template-columns: 1fr; }
+      .principle { min-height: auto; }
+      .principle-number { margin-bottom: 1.4rem; }
+      .work-card:nth-child(n) { grid-column: span 12; min-height: 360px; }
+    }
+    @media (max-width: 560px) {
+      .nav { width: min(100% - 1.25rem, 1180px); }
+      .brand > span:last-child { font-size: .9rem; }
+      .container { width: min(100% - 1.3rem, 1180px); }
+      .hero { padding-top: 3.2rem; }
+      h1 { font-size: clamp(3.15rem, 18vw, 5rem); }
+      .portrait-stage { padding-inline: .7rem; }
+      .hello-card { left: -1%; }
+      .impact-card { right: -1%; min-width: 150px; }
+      .proof { min-height: 140px; padding: 1.4rem 1rem; }
+      .feature-case { border-radius: 1.35rem; }
+      .case-header { align-items: flex-start; flex-direction: column-reverse; gap: 1rem; }
+      .case-company-lockup { align-items: flex-start; flex-direction: column; }
+      .case-number { font-size: 2.2rem; }
+      .chapter-grid, .brand-grid { grid-template-columns: 1fr; }
+      .campaign-grid, .brochure-proof, .campaign-role, .audio-grid { grid-template-columns: 1fr; }
+      .design-preview-link { grid-template-columns: 1fr auto; }
+      .diamond-gallery { grid-template-columns: 1fr; }
+      .diamond-wide, .diamond-aparshakti { grid-column: auto; aspect-ratio: 4 / 2.2; }
+      .diamond-editorial { aspect-ratio: 4 / 4.25; }
+      .campaign-media iframe, .symphony-grid .campaign-media iframe { min-height: 250px; }
+      .campaign-art-wide, .campaign-art-portrait { aspect-ratio: 4 / 3; }
+      .brochure-images img { min-height: 130px; }
+      .tool-logo-wall { grid-template-columns: repeat(2, 1fr); }
+      .spotlight-tools { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .certificate-grid { grid-template-columns: 1fr; }
+      .capability-grid { grid-template-columns: repeat(2, 1fr); }
+      .education-photo, .education-photo img { min-height: 390px; }
+      .degree-accreditation { grid-template-columns: 1fr; }
+      .degree-accreditation img { max-width: 250px; }
+      .ai-note { grid-template-columns: 1fr; }
+      .role { grid-template-columns: 1fr; gap: .55rem; }
+      .footer-inner { flex-direction: column; text-align: center; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important; transition-duration: .01ms !important;
+        animation-duration: .01ms !important; animation-iteration-count: 1 !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Nisha Tank — home">
+        <span class="brand-mark">NT</span>
+        <span>Nisha Tank</span>
+      </a>
+      <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#toolkit-spotlight">Toolkit</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#creative-work">Design work</a></li>
+        <li><a href="#campaigns">Campaigns</a></li>
+        <li><a href="#brands">Brands</a></li>
+        <li><a href="#experience">Journey</a></li>
+        <li><a href="#credentials">Certificates</a></li>
+        <li><a class="nav-cta" href="#contact">Let’s talk</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <p class="eyebrow">Hi, I’m <strong>Nisha Tank</strong></p>
+          <h1>Creative marketing, built to be <em>remembered.</em></h1>
+          <p class="hero-copy">UK-based <strong>Digital Marketing Executive with 5+ years’ experience</strong> delivering integrated campaigns across hospitality, consumer, luxury and agency environments. I combine brand strategy, performance marketing, content, PR and design to strengthen visibility, engagement and commercial outcomes.</p>
+          <p class="hero-work-status"><span class="status-dot" aria-hidden="true"></span><span><strong>UK work status:</strong> eligible to work in the UK until 15 January 2027; employer sponsorship required thereafter.</span></p>
+          <div class="button-row">
+            <a class="button button-primary" href="#work">See my work <span class="button-arrow" aria-hidden="true">↘</span></a>
+            <a class="button button-secondary" href="assets/Nisha-Tank-Marketing-Resume.pdf" download>Download résumé <span class="button-arrow" aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+
+        <div class="portrait-stage reveal">
+          <div class="portrait-frame">
+            <img src="assets/nisha-tank-portrait.jpeg" alt="Nisha Tank smiling while working at her laptop" width="1350" height="1800">
+          </div>
+          <div class="hello-card" aria-hidden="true">Ideas with intent ✦</div>
+          <div class="impact-card"><strong>5+</strong><span>years across integrated marketing</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="proof-strip" aria-label="Professional profile at a glance">
+      <div class="container proof-grid">
+        <article class="proof">
+          <span class="proof-label">Current company</span>
+          <img class="current-company-logo" src="assets/rutland-hall-logo.svg" alt="Rutland Hall Hotel and Spa">
+          <span class="proof-copy">Marketing &amp; PR Assistant · January 2025—Present</span>
+        </article>
+        <article class="proof"><span class="proof-label">Experience</span><strong>5+</strong><span class="proof-copy">years across hospitality, consumer, luxury and agency marketing</span></article>
+        <article class="proof"><span class="proof-label">Campaign ownership</span><strong class="proof-word">End-to-end</strong><span class="proof-copy">strategy, creative, launch, optimisation and reporting</span></article>
+        <article class="proof"><span class="proof-label">Channel range</span><strong class="proof-word">Multi-channel</strong><span class="proof-copy">paid media, web, PR, email, social, video and design</span></article>
+      </div>
+    </section>
+
+    <section class="toolkit-spotlight" id="toolkit-spotlight" aria-labelledby="toolkit-spotlight-title">
+      <div class="container toolkit-spotlight-grid">
+        <div class="reveal">
+          <p class="section-kicker">Employer-ready toolkit</p>
+          <h2 id="toolkit-spotlight-title">The tools behind the work.</h2>
+          <p>A quick view of the platforms I use to plan, create, launch and measure campaigns. The complete toolkit appears later in the portfolio.</p>
+        </div>
+        <div class="spotlight-tools reveal" aria-label="Featured marketing tools">
+          <a class="spotlight-tool" href="#toolkit"><img src="assets/tool-icons/google-analytics.svg" alt=""><span>Google Analytics</span></a>
+          <a class="spotlight-tool" href="#toolkit"><img src="assets/tool-icons/google-ads.svg" alt=""><span>Google Ads</span></a>
+          <a class="spotlight-tool" href="#toolkit"><img src="assets/tool-icons/meta.svg" alt=""><span>Meta Ads</span></a>
+          <a class="spotlight-tool" href="#toolkit"><img src="assets/platform-icons/microsoft-excel.svg" alt=""><span>Microsoft Excel</span></a>
+          <a class="spotlight-tool" href="#toolkit"><img src="assets/tool-icons/canva.jpg" alt=""><span>Canva</span></a>
+          <a class="spotlight-tool" href="#toolkit"><img src="assets/tool-icons/capcut.png" alt=""><span>CapCut</span></a>
+          <a class="spotlight-tool" href="#toolkit"><img src="assets/tool-icons/adobe-illustrator.svg" alt=""><span>Adobe Illustrator</span></a>
+          <a class="spotlight-tool" href="#toolkit"><img src="assets/platform-icons/openai.svg" alt=""><span>ChatGPT</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad" id="about">
+      <div class="container">
+        <p class="section-kicker reveal">About me</p>
+        <h2 class="section-title reveal">Strategic thinking. Creative execution. Measurable outcomes.</h2>
+        <div class="about-grid">
+          <div class="about-content">
+            <p class="about-statement reveal">I believe marketing has real power when insight, creativity and responsibility work together.</p>
+            <div class="about-copy reveal">
+              <p>I enjoy owning the complete marketing journey, from defining the proposition and audience to executing the launch, reporting performance and improving the next phase. For me, the creative idea and the commercial objective should always strengthen one another.</p>
+              <p>My experience spans high-profile Indian consumer brands, luxury hospitality, influencer marketing and agency accounts. It has taught me how to adapt the strategy to each audience without diluting the brand, and how to turn a plan into coordinated work across paid media, web, content, PR, email, video and design.</p>
+            </div>
+
+            <div class="about-personal reveal">
+              <div>
+                <p class="section-kicker">What I bring to a team</p>
+                <h3>Clear thinking, creative energy and ownership.</h3>
+                <p>I ask the extra question because it often sharpens the audience insight, improves the customer journey and turns a good idea into a stronger commercial result.</p>
+              </div>
+              <p class="about-rule">“Marketing is powerful enough to shape decisions, so it deserves to be thoughtful, honest and done the right way.”</p>
+            </div>
+          </div>
+          <figure class="about-photo">
+            <img src="assets/nisha-about-photo-enhanced.png" alt="Nisha Tank working on her laptop in a creative office" width="1086" height="1448">
+          </figure>
+        </div>
+
+        <div class="principles">
+          <article class="principle reveal">
+            <span class="principle-number">01</span>
+            <h3>I start by listening</h3>
+            <p>Who are we speaking to? What do they need? What would make this message genuinely useful?</p>
+          </article>
+          <article class="principle reveal">
+            <span class="principle-number">02</span>
+            <h3>Then I make</h3>
+            <p>I turn the strategy into campaigns, designs, videos and journeys that feel recognisable and human.</p>
+          </article>
+          <article class="principle reveal">
+            <span class="principle-number">03</span>
+            <h3>And I keep learning</h3>
+            <p>I read the numbers, use new tools intelligently and make the next version more focused than the last.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad impact-section" id="work">
+      <div class="container">
+        <p class="section-kicker reveal">Work &amp; projects</p>
+        <h2 class="section-title reveal">Here’s the work I’m closest to right now.</h2>
+        <p class="section-intro reveal">I don’t want to simply tell you what I can do. Wherever possible, I want to show you the live journey, the public work and the thinking behind it.</p>
+
+        <article class="feature-case reveal">
+          <header class="case-header">
+            <div>
+              <span class="current-label">Current chapter · January 2025—Present</span>
+              <div class="case-company-lockup">
+                <img class="case-company-logo" src="assets/rutland-hall-logo.svg" alt="Rutland Hall Hotel and Spa logo">
+                <h3>Rutland Hall Hotel &amp; Spa</h3>
+              </div>
+              <p class="case-role">Marketing &amp; PR Assistant · Hospitality marketing</p>
+            </div>
+            <span class="case-number" aria-hidden="true">01</span>
+          </header>
+
+          <div class="case-summary">
+            <p class="case-quote">I create connected marketing journeys, ensuring every touchpoint supports the guest experience from first discovery through to arrival.</p>
+            <div class="case-copy">
+              <p>I coordinate Rutland Hall’s integrated marketing programme across paid media, website, email, social, PR and guest-facing collateral. My responsibilities include agency management, budget monitoring, creative approvals and performance reporting, ensuring every channel supports the hotel’s brand and commercial objectives.</p>
+              <p>I translate campaign strategy into production-ready assets across copy, photography, video and design. I manage day-to-day creative output in Canva and CapCut, make working amendments in Adobe Illustrator, and brief specialist partners when a larger production requires external expertise.</p>
+              <div class="case-tags" aria-label="Rutland Hall capabilities">
+                <span class="case-tag">Website journey</span>
+                <span class="case-tag">Menu design</span>
+                <span class="case-tag">Paid media</span>
+                <span class="case-tag">Email marketing</span>
+                <span class="case-tag">PR support</span>
+                <span class="case-tag">Short-form video</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="evidence-title">Evidence you can open</p>
+          <div class="evidence-grid">
+            <article class="evidence-card">
+              <div class="evidence-image">
+                <img src="assets/rutland-hall-website.jpg" alt="Live Rutland Hall Hotel and Spa homepage showing the lakeside resort journey" width="1280" height="720">
+              </div>
+              <div class="evidence-body">
+                <h4>Website journey &amp; launch support</h4>
+                <p>I coordinated the website project end to end with the external agency, managing content, imagery, campaign integrations, user experience feedback and input from departments across the resort.</p>
+                <a class="evidence-link" href="https://rutlandhall.co.uk" target="_blank" rel="noreferrer">Visit the live website ↗</a>
+              </div>
+            </article>
+
+            <aside class="journey-card">
+              <div>
+                <p class="section-kicker">What I bring to it</p>
+                <h3>More than one channel.</h3>
+                <p>I’m happiest when the work connects rather than sitting in separate boxes.</p>
+              </div>
+              <ul class="journey-list">
+                <li>Web and campaign coordination</li>
+                <li>Guest-facing design and collateral</li>
+                <li>Social content and CapCut editing</li>
+                <li>Paid, email and PR support</li>
+                <li>Performance-informed improvements</li>
+              </ul>
+            </aside>
+          </div>
+
+          <a class="design-preview-link" href="#creative-work">
+            <span><strong>Design &amp; editing work now has its own chapter.</strong>Festive artwork, social assets, print ads and brochure contributions are grouped clearly below.</span>
+            <b aria-hidden="true">↘</b>
+          </a>
+        </article>
+
+        <div class="chapter-head">
+          <p class="section-kicker reveal">Career progression · current to past</p>
+          <h2 class="section-title reveal">The roles that built my cross-channel experience.</h2>
+        </div>
+        <div class="chapter-grid">
+          <article class="chapter-card reveal">
+            <div>
+              <span class="chapter-meta">Nov 2024—Jan 2025 · Events</span>
+              <div class="chapter-company"><span class="chapter-logo-shell"><span class="chapter-wordmark">LSG</span></span><h3>Ladies Social Gathering</h3></div>
+              <p>Owned campaign planning and event marketing for a premium women’s community, coordinating venues, vendors and member communications while strengthening the organisation’s public visibility.</p>
+            </div>
+            <span class="chapter-result">Measured impact: +25% brand visibility</span>
+          </article>
+          <article class="chapter-card reveal">
+            <div>
+              <span class="chapter-meta">Oct 2023—Apr 2024 · Education</span>
+              <div class="chapter-company"><span class="chapter-logo-shell"><img class="chapter-logo" src="assets/company-logos/global-alliance-academy.jpg" alt="Global Alliance Academy logo"></span><h3>Global Alliance Academy</h3></div>
+              <p>Built and optimised a lead-generation programme combining organic social with more than 15 Google Ads campaigns, strengthening audience growth, engagement and qualified enquiries.</p>
+            </div>
+            <span class="chapter-result">Measured impact: +30% followers · +20% engagement · +30% leads</span>
+          </article>
+          <article class="chapter-card reveal">
+            <div>
+              <span class="chapter-meta">Oct 2021—Jun 2023 · Agency · Mumbai</span>
+              <div class="chapter-company"><span class="chapter-logo-shell"><img class="chapter-logo" src="assets/company-logos/white-canvas.png" alt="White Canvas logo"></span><h3>White Canvas</h3></div>
+              <p>Managed B2B and B2C accounts across five social platforms, delivered every project on schedule and connected creative development with reporting, website updates and commercial performance.</p>
+            </div>
+            <span class="chapter-result">Measured impact: +25% campaign performance · +30% ROI · +25% conversions</span>
+          </article>
+          <article class="chapter-card reveal">
+            <div>
+              <span class="chapter-meta">Sep 2020—Sep 2021 · Influencer marketing · Mumbai</span>
+              <div class="chapter-company"><span class="chapter-logo-shell"><span class="chapter-wordmark">ZAP</span></span><h3>Zap Creatives</h3></div>
+              <p>Delivered social and influencer programmes across more than 15 client accounts, 10 celebrity shoots and 20 creator partnerships, coordinating talent, content and campaign delivery.</p>
+            </div>
+            <span class="chapter-result">Measured impact: +40% followers · +30% engagement</span>
+          </article>
+        </div>
+        <a class="proof-source" href="assets/Nisha-Tank-Marketing-Resume.pdf" target="_blank">Open the résumé behind these results ↗</a>
+      </div>
+    </section>
+
+    <section class="section-pad creative-work-section" id="creative-work">
+      <div class="container">
+        <p class="section-kicker reveal">Designs &amp; editing work</p>
+        <h2 class="section-title reveal">Creative work, organised by format.</h2>
+        <p class="section-intro reveal">A clearer view of the design contribution behind the campaigns: festive artwork for social and print, followed by brochure projects where I shaped content, structure and production.</p>
+
+        <div class="creative-directory">
+          <article class="creative-blog reveal">
+            <div class="creative-blog-head">
+              <div>
+                <span class="design-format">Festive artwork</span>
+                <h3>Christmas 2026 campaign designs</h3>
+              </div>
+              <p>I created and adapted the artwork below, translating the festive proposition into practical creative for social channels and print while maintaining Rutland Hall’s visual identity.</p>
+            </div>
+
+            <div class="campaign-grid">
+              <div class="campaign-art-wrap">
+                <div class="campaign-art campaign-art-wide">
+                  <img src="assets/rutland-hall-christmas-party-nights.jpg" alt="Rutland Hall Christmas 2026 Festive Party Nights social artwork" loading="lazy" width="1800" height="1272">
+                </div>
+                <span class="campaign-caption"><span>Socials</span><b>Landscape campaign artwork</b></span>
+              </div>
+              <div class="campaign-art-wrap">
+                <div class="campaign-art campaign-art-portrait">
+                  <img src="assets/rutland-hall-christmas-poster.jpg" alt="Christmas at Rutland Hall 2026 print advertisement" loading="lazy" width="1271" height="1800">
+                </div>
+                <span class="campaign-caption"><span>Print ads</span><b>Portrait poster</b></span>
+              </div>
+            </div>
+
+            <div class="campaign-role">
+              <div class="role-note"><strong>My design contribution</strong><span>Creative adaptation, layout, copy hierarchy, image selection, calls to action and final artwork production.</span></div>
+              <div class="role-note"><strong>Campaign rollout</strong><span>Artwork prepared across social, email, website, display and on-property promotion.</span></div>
+            </div>
+          </article>
+
+          <article class="creative-blog creative-blog-dark reveal">
+            <div class="creative-blog-head">
+              <div>
+                <span class="design-format">Brochure designs</span>
+                <h3>Content, structure &amp; production</h3>
+              </div>
+              <p>These were separate brochure projects. The brochure is shown on the left; my contribution and the final public proof sit on the right.</p>
+            </div>
+
+            <div class="brochure-directory">
+              <div class="brochure-proof">
+                <div class="brochure-images brochure-images-single">
+                  <img src="assets/rutland-hall-christmas-brochure-cover.jpg" alt="Festive Celebrations 2026 at Rutland Hall brochure cover" loading="lazy" width="900" height="900">
+                </div>
+                <div class="brochure-copy">
+                  <p class="section-kicker">Christmas brochure</p>
+                  <h4>Content structure and production coordination.</h4>
+                  <p>I wrote and structured the brochure content, managed the information flow and coordinated the external designer through feedback, amendments and final delivery.</p>
+                  <a class="evidence-link" href="https://www.flipsnack.com/69B597BBDC9/rutland-hall-2026-digital-christmas-brochure" target="_blank" rel="noreferrer">Open Christmas brochure ↗</a>
+                </div>
+              </div>
+
+              <div class="brochure-proof">
+                <div class="brochure-images">
+                  <img src="assets/asian-wedding-brochure-cover.jpg" alt="Rutland Hall Asian Weddings brochure cover" loading="lazy" width="1800" height="1273">
+                  <img src="assets/asian-wedding-brochure-spread.jpg" alt="Inside spread from the Rutland Hall Asian Weddings brochure" loading="lazy" width="1800" height="1273">
+                </div>
+                <div class="brochure-copy">
+                  <p class="section-kicker">Asian Weddings brochure</p>
+                  <h4>Content direction and designer handoff.</h4>
+                  <p>I coordinated production and shaped the content journey, keeping the final brochure aligned with the hotel brand and the couples and families it needed to reach.</p>
+                  <a class="evidence-link" href="assets/rutland-hall-asian-wedding-brochure-web.pdf" target="_blank">Open Asian Weddings brochure ↗</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad radio-work-section" id="radio-work">
+      <div class="container">
+        <p class="section-kicker reveal">Radio &amp; audio work</p>
+        <h2 class="section-title reveal">Campaign stories made to be heard.</h2>
+        <p class="section-intro reveal">Radio partnerships and completed audio assets now live together, separate from the visual campaign case studies.</p>
+
+        <div class="radio-columns">
+          <article class="radio-case reveal" aria-label="Rutland and Stamford Sound audio work samples">
+            <span class="design-format">Rutland &amp; Stamford Sound</span>
+            <h3>Christmas radio collaboration</h3>
+            <p>Two completed Christmas radio spots supporting Rutland Hall’s festive campaign, available to play directly below.</p>
+            <div class="audio-grid">
+              <article class="audio-card">
+                <strong>Christmas radio spot 01</strong>
+                <span>21 seconds · MP3</span>
+                <audio controls preload="metadata">
+                  <source src="assets/rutland-hall-christmas-radio-1.mp3" type="audio/mpeg">
+                  Your browser does not support the audio player.
+                </audio>
+              </article>
+              <article class="audio-card">
+                <strong>Christmas radio spot 02</strong>
+                <span>25 seconds · MP3</span>
+                <audio controls preload="metadata">
+                  <source src="assets/rutland-hall-christmas-radio-2.mp3" type="audio/mpeg">
+                  Your browser does not support the audio player.
+                </audio>
+              </article>
+            </div>
+          </article>
+
+          <article class="radio-case radio-case--house reveal">
+            <span class="design-format">The House of Diamondss</span>
+            <h3>93.5 FM partnership with RJ Rachana</h3>
+            <span class="radio-station">93.5 FM · RJ Rachana</span>
+            <p>I helped coordinate the radio partnership, including on-air segments and interviews that extended the campaign beyond visual and social channels.</p>
+            <a class="radio-video-link" href="https://www.instagram.com/thehouseofdiamondss/reels/" target="_blank" rel="noreferrer" aria-label="Open The House of Diamondss campaign videos on Instagram">
+              <img src="assets/campaigns/house-of-diamonds-editorial-wide.jpg" alt="The House of Diamondss jewellery campaign imagery" loading="lazy" width="1600" height="422">
+              <span class="radio-video-label"><span class="radio-play" aria-hidden="true">▶</span>View public campaign videos on Instagram ↗</span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad portfolio-campaigns" id="campaigns">
+      <div class="container">
+        <p class="section-kicker reveal">Selected campaigns · proof-led</p>
+        <h2 class="section-title reveal">Campaigns I helped take from strategy to launch.</h2>
+        <p class="section-intro reveal">This is the work behind the job titles: the proposition, partnerships, creative coordination, rollout and performance thinking that turned each brief into a public-facing campaign.</p>
+
+        <div class="campaign-stack">
+          <p class="campaign-group-label reveal">Wonder Cement</p>
+
+          <article class="campaign-feature reveal">
+            <div class="campaign-feature-grid">
+              <div class="campaign-media">
+                <iframe src="https://www.youtube-nocookie.com/embed/MboPH7gpnXQ" title="Wonder Cement Farq Nazar Aayega commercial featuring Amitabh Bachchan" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              <div class="campaign-copy">
+                <span class="campaign-brandline">Wonder Cement · Integrated launch</span>
+                <h3>Farq Nazar Aayega</h3>
+                <p class="campaign-subtitle">“You’ll see the difference”</p>
+                <ul class="campaign-points">
+                  <li>Spearheaded pre-launch, launch and post-launch planning around Wonder Cement’s superior product quality.</li>
+                  <li>Secured Amitabh Bachchan as brand ambassador, strengthening campaign credibility and mass-market appeal.</li>
+                  <li>Collaborated with his team to align the creative message with the brand’s values and shape the final television commercial.</li>
+                </ul>
+                <a class="campaign-proof-link" href="https://youtu.be/MboPH7gpnXQ?si=z9aPDicu1lS_rAjm" target="_blank" rel="noreferrer">Open the commercial on YouTube ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="campaign-feature reverse reveal">
+            <div class="campaign-feature-grid">
+              <div class="campaign-media">
+                <iframe src="https://www.youtube-nocookie.com/embed/tP467dkxiX4" title="Wonder Cement and Shabaash Mithu partnership video" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              <div class="campaign-copy">
+                <span class="campaign-brandline">Wonder Cement · Film partnership</span>
+                <h3>Shabaash Mithu</h3>
+                <p class="campaign-subtitle">Building brand visibility through a culturally relevant partnership.</p>
+                <ul class="campaign-points">
+                  <li>Connected Wonder Cement with the Bollywood biopic starring Taapsee Pannu as Mithali Raj, including brand placement across jerseys and promotional assets.</li>
+                  <li>Coordinated announcements, interviews and an offline cricket activation with Taapsee Pannu and Mithali Raj across the launch journey.</li>
+                  <li>Worked with creative and content teams on posters, banners and WhatsApp activity that linked the film’s resilience narrative to the brand.</li>
+                </ul>
+                <a class="campaign-proof-link" href="https://youtu.be/tP467dkxiX4?si=ApWKpXgnYzU4f1yF" target="_blank" rel="noreferrer">Watch the partnership video ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <p class="campaign-group-label reveal">The House of Diamondss</p>
+
+          <article class="campaign-feature diamond-case reveal">
+            <div class="diamond-head">
+              <div class="campaign-heading">
+                <span class="campaign-brandline">Purpose-led luxury campaign</span>
+                <h3>Wild in the Wild</h3>
+                <p class="campaign-subtitle">Jewellery storytelling in support of wildlife conservation, with a particular focus on elephants.</p>
+                <span class="campaign-outcome"><strong>+30%</strong> increase in sales</span>
+              </div>
+              <ul class="campaign-points">
+                <li>Orchestrated the campaign proposition and rollout around conservation-linked jewellery sales.</li>
+                <li>Supported brand photoshoots on set, coordinating jewellery and product placement across brand, client and talent teams.</li>
+                <li>Contributed to collaborations featuring Erica Fernandes, Aparshakti Khurana and Shruti Haasan.</li>
+              </ul>
+            </div>
+            <div class="diamond-gallery" aria-label="Wild in the Wild campaign imagery">
+              <figure class="diamond-wide"><img src="assets/campaigns/house-of-diamonds-editorial-wide.jpg" alt="The House of Diamondss green editorial jewellery campaign" loading="lazy" width="1600" height="422"></figure>
+              <figure class="diamond-aparshakti"><img src="assets/campaigns/house-of-diamonds-aparshakti.jpg" alt="Aparshakti Khurana collaboration for The House of Diamondss" loading="lazy" width="1600" height="710"></figure>
+              <figure class="diamond-editorial"><img src="assets/campaigns/house-of-diamonds-editorial-01.jpg" alt="The House of Diamondss celebrity jewellery editorial portrait" loading="lazy" width="1600" height="1592"></figure>
+              <figure class="diamond-editorial"><img src="assets/campaigns/house-of-diamonds-editorial-02.jpg" alt="The House of Diamondss silver fashion editorial" loading="lazy" width="1600" height="1340"></figure>
+              <figure class="diamond-editorial"><img src="assets/campaigns/house-of-diamonds-editorial-03.jpg" alt="The House of Diamondss jewellery campaign portrait" loading="lazy" width="1411" height="1600"></figure>
+            </div>
+          </article>
+
+          <p class="campaign-group-label reveal">Symphony Limited</p>
+
+          <div class="symphony-grid">
+            <article class="campaign-feature reveal">
+              <div class="campaign-feature-grid">
+                <div class="campaign-media">
+                  <iframe src="https://www.youtube-nocookie.com/embed/Ggn8h9MWVOU" title="Symphony Papa Cool television commercial" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="campaign-copy">
+                  <span class="campaign-brandline">Symphony · Product campaign</span>
+                  <h3>Papa Cool</h3>
+                  <p class="campaign-subtitle">Turning CFD technology into an accessible consumer story.</p>
+                  <ul class="campaign-points">
+                    <li>Managed the campaign across television creative and interactive social content.</li>
+                    <li>Helped communicate the product’s cooling technology through a clear, memorable campaign idea.</li>
+                  </ul>
+                  <a class="campaign-proof-link" href="https://youtu.be/Ggn8h9MWVOU?si=DWgtijPlTEliaAoM" target="_blank" rel="noreferrer">Watch the TV commercial ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <div class="campaign-mini-stack">
+              <article class="campaign-mini reveal">
+                <span class="campaign-brandline">Brand collaboration</span>
+                <h3>Marvel &amp; Disney × Symphony</h3>
+                <p>Managed the Hero and Magical range launch across pre-buzz video, interactive contests and coordinated social activity.</p>
+                <span class="campaign-stat">10% sales increase</span>
+                <a class="campaign-proof-link" href="https://www.instagram.com/p/Cdx7RyIFv8H/?hl=en" target="_blank" rel="noreferrer">View campaign proof on Instagram ↗</a>
+              </article>
+              <article class="campaign-mini reveal">
+                <span class="campaign-brandline">News18 partnership</span>
+                <h3>Thinkers of Tomorrow</h3>
+                <p>Coordinated social campaigns promoting nominations and celebrating sustainable, employee-focused MSMEs across India.</p>
+              </article>
+              <article class="campaign-mini reveal">
+                <span class="campaign-brandline">Technology launch</span>
+                <h3>First BLDC air-cooler range</h3>
+                <p>Built and managed social content calendars, monitored campaign performance and coordinated with the paid media team to optimise sponsored activity.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad brands-section" id="brands">
+      <div class="container">
+        <p class="section-kicker reveal">Brands I’ve worked with</p>
+        <div class="brands-intro">
+          <h2 class="section-title reveal">Brands I’ve helped move forward.</h2>
+          <p class="brands-intro-copy reveal">From luxury hospitality to consumer and industrial brands, each account asked for a different voice. My role was to find the proposition, protect the quality and help the campaign land with the right audience.</p>
+        </div>
+
+        <div class="brand-grid">
+          <article class="brand-card reveal">
+            <a class="brand-link" href="https://rutlandhall.co.uk/" target="_blank" rel="noreferrer">
+              <div class="brand-index"><span>01 · Current</span><span>Hospitality</span></div>
+              <div><span class="brand-logo-shell brand-logo-shell-dark"><img class="brand-logo" src="assets/rutland-hall-logo.svg" alt="Rutland Hall Hotel and Spa logo"></span><h3>Rutland Hall Hotel &amp; Spa</h3><p>My present chapter and the most complete expression of my cross-channel work.</p></div>
+            </a>
+          </article>
+          <article class="brand-card reveal">
+            <a class="brand-link" href="https://www.tajhotels.com/en-in/hotels/taj-amer-jaipur" target="_blank" rel="noreferrer">
+              <div class="brand-index"><span>02 · Premium positioning</span><span>Luxury hospitality</span></div>
+              <div><span class="brand-logo-shell"><img class="brand-logo brand-logo--taj" src="assets/company-logos/taj-hotels.svg" alt="Taj Hotels logo"></span><h3>Taj Amer, Jaipur</h3><p>Campaign proposition, creative concepts and brand alignment for a premium hospitality audience.</p></div>
+            </a>
+          </article>
+          <article class="brand-card brand-card--wonder reveal">
+            <a class="brand-link" href="https://www.wondercement.com/en" target="_blank" rel="noreferrer">
+              <div class="brand-index"><span>03</span><span>Brand campaigns</span></div>
+              <div><span class="brand-logo-shell"><img class="brand-logo" src="assets/company-logos/wonder-cement.svg" alt="Wonder Cement logo"></span><h3>Wonder Cement</h3><p>Campaign delivery shaped around strong creative quality, visibility and launch performance.</p></div>
+            </a>
+          </article>
+          <article class="brand-card reveal">
+            <a class="brand-link" href="https://symphonylimited.com/" target="_blank" rel="noreferrer">
+              <div class="brand-index"><span>04</span><span>Consumer brand</span></div>
+              <div><span class="brand-logo-shell"><img class="brand-logo" src="assets/company-logos/symphony.png" alt="Symphony Limited logo"></span><h3>Symphony Limited</h3><p>Campaign execution and launch strategy for a recognised Indian air-cooler brand.</p></div>
+            </a>
+          </article>
+          <article class="brand-card reveal">
+            <a class="brand-link" href="https://www.rajgrp.com/" target="_blank" rel="noreferrer">
+              <div class="brand-index"><span>05</span><span>Brand campaigns</span></div>
+              <div><span class="brand-logo-shell"><img class="brand-logo" src="assets/company-logos/raj-petro.png" alt="Raj Petro Specialities logo"></span><h3>Raj Petro Specialities</h3><p>Cross-channel campaign work supported by reporting, insight and future-facing recommendations.</p></div>
+            </a>
+          </article>
+          <article class="brand-card reveal">
+            <a class="brand-link" href="https://www.instagram.com/thehouseofdiamondss/" target="_blank" rel="noreferrer">
+              <div class="brand-index"><span>06</span><span>Luxury &amp; lifestyle</span></div>
+              <div><span class="brand-logo-shell"><img class="brand-logo brand-logo--house" src="assets/company-logos/house-of-diamondss.jpg" alt="The House of Diamondss logo"></span><h3>The House of Diamondss</h3><p>Creative and audience-led brand experience within my earlier marketing journey.</p></div>
+            </a>
+          </article>
+        </div>
+
+        <div class="contribution-section-head reveal">
+          <p class="section-kicker">Selected brand contributions</p>
+          <h2 class="section-title">How I shaped the work behind the brand.</h2>
+        </div>
+        <div class="brand-contributions">
+          <article class="contribution-card reveal">
+            <div class="contribution-brand"><span class="contribution-logo-shell"><img class="contribution-logo" src="assets/company-logos/symphony.png" alt="Symphony Limited logo"></span><span>Symphony Limited</span></div>
+            <h3>Integrated consumer campaigns from launch strategy to reporting.</h3>
+            <div class="campaign-names">
+              <span class="campaign-name">Marvel × Disney</span>
+              <span class="campaign-name">Papa Cool</span>
+              <span class="campaign-name">Kal Ki Soch</span>
+            </div>
+            <p>I led day-to-day execution across launch planning, creative quality control, cross-channel rollout and performance reporting. Audience and campaign insights were used to optimise live activity and inform the next marketing direction.</p>
+          </article>
+          <article class="contribution-card reveal">
+            <div class="contribution-brand"><span class="contribution-logo-shell"><img class="contribution-logo contribution-logo--taj" src="assets/company-logos/taj-hotels.svg" alt="Taj Hotels logo"></span><span>Taj Amer, Jaipur</span></div>
+            <h3>Strengthening premium positioning for Taj Amer, Jaipur.</h3>
+            <p>I developed and refined campaign propositions, shaped creative concepts and managed brand-alignment reviews so every asset reflected Taj’s luxury codes and positioned the property consistently for a premium hospitality audience.</p>
+          </article>
+        </div>
+        <p class="brand-footnote reveal">A selection of the brands and campaigns from my experience. Brand links open the live public pages.</p>
+      </div>
+    </section>
+
+    <section class="section-pad" id="experience">
+      <div class="container experience-grid">
+        <aside class="experience-aside">
+          <p class="section-kicker reveal">My journey · present to past</p>
+          <h2 class="section-title reveal">Every role added something I use now.</h2>
+          <p class="section-intro reveal">I’ve kept the journey in reverse chronological order, so you can begin with the marketer I am today and trace the experiences that built me.</p>
+        </aside>
+
+        <div class="timeline">
+          <article class="role reveal">
+            <time datetime="2025-01">Jan 2025—Present</time>
+            <div><h3>Marketing &amp; PR Assistant</h3><p class="role-company">Rutland Hall Hotel &amp; Spa</p><p>Coordinate integrated campaigns across web, email, social, paid media, PR and guest-facing collateral, with responsibility for agency activity, budget monitoring, creative approvals and performance reporting.</p></div>
+          </article>
+          <article class="role reveal">
+            <time datetime="2024-11">Nov 2024—Jan 2025</time>
+            <div><h3>Marketing &amp; Event Coordinator</h3><p class="role-company">Ladies Social Gathering</p><p>Built event visibility through campaign planning, content and coordination—contributing to a 25% increase in brand visibility.</p></div>
+          </article>
+          <article class="role reveal">
+            <time datetime="2023-10">Oct 2023—Apr 2024</time>
+            <div><h3>Social Marketing Executive</h3><p class="role-company">Global Alliance Academy</p><p>Combined social content and paid search to grow followers by 30%, engagement by 20% and leads by 30%.</p></div>
+          </article>
+          <article class="role reveal">
+            <time datetime="2021-10">Oct 2021—Jun 2023</time>
+            <div><h3>Account Executive</h3><p class="role-company">White Canvas</p><p>Led day-to-day delivery across client accounts, launched campaigns on time and improved campaign performance, ROI and conversions.</p></div>
+          </article>
+          <article class="role reveal">
+            <time datetime="2020-09">Sep 2020—Sep 2021</time>
+            <div><h3>Influencer &amp; Social Media Executive</h3><p class="role-company">Zap Creatives</p><p>Managed social strategy and influencer activity for 15+ clients, including more than 10 celebrity shoots and 20+ creator partnerships.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad toolkit" id="toolkit">
+      <div class="container">
+        <p class="section-kicker reveal">My toolkit</p>
+        <h2 class="section-title reveal">Tools I can move confidently between.</h2>
+        <p class="section-intro reveal">A practical mix of analytics, advertising, content, design, publishing and collaboration platforms used across my in-house and agency work.</p>
+
+        <div class="tool-section">
+          <div class="tool-section-head reveal">
+            <h3>Marketing, analytics &amp; creative tools</h3>
+            <p>The systems I use to plan, build, measure and improve campaign activity.</p>
+          </div>
+          <div class="tool-logo-wall">
+            <article class="tool-tile reveal"><img class="tool-icon" src="assets/tool-icons/google-analytics.svg" alt="" loading="lazy"><span class="tool-name">Google Analytics</span></article>
+            <article class="tool-tile reveal"><img class="tool-icon" src="assets/tool-icons/google-ads.svg" alt="" loading="lazy"><span class="tool-name">Google Ads</span></article>
+            <article class="tool-tile reveal"><img class="tool-icon" src="assets/tool-icons/meta.svg" alt="" loading="lazy"><span class="tool-name">Meta Ads Manager</span></article>
+            <article class="tool-tile reveal"><img class="tool-icon" src="assets/platform-icons/microsoft-excel.svg" alt="" loading="lazy"><span class="tool-name">Microsoft Excel</span></article>
+            <article class="tool-tile reveal"><img class="tool-icon" src="assets/tool-icons/konnect-insights.png" alt="" loading="lazy"><span class="tool-name">Konnect Insights</span></article>
+            <article class="tool-tile reveal"><img class="tool-icon" src="assets/tool-icons/google.svg" alt="" loading="lazy"><span class="tool-name">Google Business Profile</span></article>
+            <article class="tool-tile reveal"><img class="tool-icon" src="assets/tool-icons/capcut.png" alt="" loading="lazy"><span class="tool-name">CapCut</span><span class="tool-level">Proficient</span></article>
+            <article class="tool-tile reveal"><img class="tool-icon" src="assets/tool-icons/canva.jpg" alt="" loading="lazy"><span class="tool-name">Canva</span></article>
+            <article class="tool-tile reveal"><img class="tool-icon" src="assets/platform-icons/openai.svg" alt="" loading="lazy"><span class="tool-name">ChatGPT</span></article>
+            <article class="tool-tile reveal"><img class="tool-icon" src="assets/platform-icons/google-gemini.svg" alt="" loading="lazy"><span class="tool-name">Google Gemini</span></article>
+            <article class="tool-tile reveal"><img class="tool-icon" src="assets/platform-icons/figma.svg" alt="" loading="lazy"><span class="tool-name">Figma</span></article>
+            <article class="tool-tile reveal"><img class="tool-icon" src="assets/tool-icons/adobe-illustrator.svg" alt="" loading="lazy"><span class="tool-name">Adobe Illustrator</span></article>
+          </div>
+        </div>
+
+        <div class="tool-section">
+          <div class="tool-section-head reveal">
+            <h3>Platforms I know</h3>
+            <p>Channel, publishing and workplace platforms I can use confidently as part of day-to-day marketing delivery.</p>
+          </div>
+          <div class="platform-grid">
+            <article class="platform-cluster reveal">
+              <h4>Social &amp; video</h4>
+              <ul class="platform-list">
+                <li><img class="platform-icon" src="assets/platform-icons/instagram.svg" alt=""><span>Instagram</span></li>
+                <li><img class="platform-icon" src="assets/platform-icons/facebook.svg" alt=""><span>Facebook</span></li>
+                <li><img class="platform-icon" src="assets/platform-icons/linkedin.svg" alt=""><span>LinkedIn</span></li>
+                <li><img class="platform-icon" src="assets/platform-icons/youtube.svg" alt=""><span>YouTube</span></li>
+                <li><img class="platform-icon" src="assets/platform-icons/tiktok.svg" alt=""><span>TikTok</span></li>
+                <li><img class="platform-icon" src="assets/platform-icons/pinterest.svg" alt=""><span>Pinterest</span></li>
+              </ul>
+            </article>
+            <article class="platform-cluster reveal">
+              <h4>Publishing &amp; community</h4>
+              <ul class="platform-list">
+                <li><img class="platform-icon" src="assets/platform-icons/wordpress.svg" alt=""><span>WordPress</span></li>
+                <li><img class="platform-icon" src="assets/platform-icons/mailchimp.svg" alt=""><span>Mailchimp</span></li>
+                <li><img class="platform-icon" src="assets/platform-icons/hootsuite.svg" alt=""><span>Hootsuite</span></li>
+                <li><img class="platform-icon" src="assets/platform-icons/sprout-social.svg" alt=""><span>Sprout Social</span></li>
+              </ul>
+            </article>
+            <article class="platform-cluster reveal">
+              <h4>Planning &amp; productivity</h4>
+              <ul class="platform-list">
+                <li><img class="platform-icon" src="assets/platform-icons/monday.svg" alt=""><span>monday.com</span></li>
+                <li><img class="platform-icon" src="assets/platform-icons/trello.svg" alt=""><span>Trello</span></li>
+                <li><img class="platform-icon" src="assets/platform-icons/google-docs.svg" alt=""><span>Google Docs</span></li>
+                <li><img class="platform-icon" src="assets/platform-icons/google-slides.svg" alt=""><span>Google Slides</span></li>
+                <li><img class="platform-icon" src="assets/platform-icons/google-sheets.svg" alt=""><span>Google Sheets</span></li>
+                <li><img class="platform-icon" src="assets/platform-icons/microsoft-word.svg" alt=""><span>Microsoft Word</span></li>
+                <li><img class="platform-icon" src="assets/platform-icons/microsoft-powerpoint.svg" alt=""><span>Microsoft PowerPoint</span></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+        <div class="capability-grid reveal" aria-label="Additional marketing capabilities">
+          <span class="capability-card"><span class="capability-symbol" aria-hidden="true">↗</span><span>PR outreach</span></span>
+          <span class="capability-card"><span class="capability-symbol" aria-hidden="true">◎</span><span>Influencer relations</span></span>
+          <span class="capability-card"><span class="capability-symbol" aria-hidden="true">✦</span><span>Content planning</span></span>
+          <span class="capability-card"><span class="capability-symbol" aria-hidden="true">⌘</span><span>Website management</span></span>
+          <span class="capability-card"><span class="capability-symbol" aria-hidden="true">▥</span><span>Reporting &amp; insight</span></span>
+        </div>
+        <aside class="ai-note reveal">
+          <span class="ai-mark" aria-hidden="true">AI</span>
+          <div>
+            <h3>AI-assisted marketing, with human judgement.</h3>
+            <p>I use AI thoughtfully for research, ideation, copy variations, content repurposing and workflow efficiency. The strategy, brand voice and final decision stay human.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section-pad" id="credentials">
+      <div class="container">
+        <p class="section-kicker reveal">Certificates &amp; learning</p>
+        <h2 class="section-title reveal">I keep learning because marketing never stands still.</h2>
+        <p class="section-intro reveal">A selection of named professional certificates from my public credential record, with the issuing organisation and date shown clearly.</p>
+        <div class="credentials-grid">
+          <article class="credential-card education-card reveal">
+            <div class="education-copy">
+              <img class="university-logo" src="assets/company-logos/oxford-brookes.svg" alt="Oxford Brookes University" loading="lazy">
+              <p class="section-kicker">Education</p>
+              <h3>MSc Digital Marketing</h3>
+              <p><strong>Oxford Brookes University</strong></p>
+              <small>September 2023—September 2024</small>
+              <div class="degree-accreditation" aria-label="Professional degree accreditation">
+                <img src="assets/oxford-brookes-degree-accreditation.png" alt="CIM Accredited Degree and Institute of Data and Marketing accreditation logos" loading="lazy" width="334" height="144">
+                <div>
+                  <strong>Professionally accredited degree</strong>
+                  <span>Accredited by the Chartered Institute of Marketing (CIM) and the Institute of Data &amp; Marketing (IDM).</span>
+                </div>
+              </div>
+            </div>
+            <figure class="education-photo">
+              <img src="assets/nisha-oxford-brookes-graduation.jpg" alt="Nisha Tank celebrating at Oxford Brookes University" width="960" height="1280" loading="lazy">
+            </figure>
+          </article>
+          <article class="credential-card reveal">
+            <p class="section-kicker">Certificates</p>
+            <h3>Professional credentials, shown.</h3>
+            <p>Open any certificate to view the supplied credential evidence at full size.</p>
+            <div class="certificate-grid">
+              <article class="certificate-item">
+                <a class="certificate-preview" href="assets/certificates/management-fashion-luxury-coursera.png" target="_blank" aria-label="Open Management of Fashion and Luxury Companies certificate">
+                  <img src="assets/certificates/management-fashion-luxury-coursera.png" alt="Coursera and Bocconi University certificate awarded to Nisha Tank" loading="lazy">
+                </a>
+                <div class="certificate-details">
+                  <span class="certificate-issuer">Bocconi University · Coursera</span>
+                  <h4>Management of Fashion and Luxury Companies</h4>
+                  <small>Completed 26 November 2024</small>
+                </div>
+              </article>
+              <article class="certificate-item">
+                <a class="certificate-preview" href="assets/certificates/international-seo-semrush.png" target="_blank" aria-label="Open International SEO certificate">
+                  <img src="assets/certificates/international-seo-semrush.png" alt="Semrush Academy International SEO certificate awarded to Nisha Tank" loading="lazy">
+                </a>
+                <div class="certificate-details">
+                  <span class="certificate-issuer">Semrush Academy</span>
+                  <h4>International SEO</h4>
+                  <small>Completed November 2024 · Credential 174ba36bcd · Expired 27 November 2025</small>
+                </div>
+              </article>
+              <article class="certificate-item">
+                <a class="certificate-preview" href="assets/certificates/social-media-marketing-hootsuite.png" target="_blank" aria-label="Open Social Media Marketing Certification">
+                  <img src="assets/certificates/social-media-marketing-hootsuite.png" alt="Hootsuite Academy Social Media Marketing Certification awarded to Nisha Tank" loading="lazy">
+                </a>
+                <div class="certificate-details">
+                  <span class="certificate-issuer">Hootsuite Academy</span>
+                  <h4>Social Media Marketing Certification</h4>
+                  <small>Issued 22 May 2024 · Credential ID 104292369</small>
+                </div>
+              </article>
+              <article class="certificate-item">
+                <a class="certificate-preview" href="assets/certificates/brand-design-foundations-linkedin.png" target="_blank" aria-label="Open Brand Design Foundations certificate">
+                  <img src="assets/certificates/brand-design-foundations-linkedin.png" alt="LinkedIn Learning Brand Design Foundations certificate awarded to Nisha Tank" loading="lazy">
+                </a>
+                <div class="certificate-details">
+                  <span class="certificate-issuer">LinkedIn Learning</span>
+                  <h4>Brand Design Foundations</h4>
+                  <small>Completed 3 June 2024 · 2 hours 34 minutes</small>
+                </div>
+              </article>
+            </div>
+            <div class="credential-actions">
+              <a class="credential-link" href="https://uk.linkedin.com/in/digitalmarketernisha-tank" target="_blank" rel="noreferrer">Verify credentials on LinkedIn ↗</a>
+              <a class="credential-link" href="assets/Nisha-Tank-Marketing-Resume.pdf" target="_blank">Open supporting résumé ↗</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad contact" id="contact">
+      <div class="container contact-inner">
+        <p class="section-kicker reveal">Let’s make something memorable</p>
+        <h2 class="section-title reveal">If something in my journey sounds like what your team needs, let’s talk.</h2>
+        <p class="contact-copy reveal">Tell me about the audience you want to reach and the challenge behind the brief. I’ll bring curiosity, care and a practical way forward.</p>
+        <div class="work-status reveal">
+          <span class="status-dot" aria-hidden="true"></span>
+          <div><strong>UK work authorisation</strong><span>Eligible to work in the UK until 15 January 2027; employer sponsorship will be required thereafter.</span></div>
+        </div>
+        <div class="button-row reveal">
+          <a class="button button-primary" href="mailto:nishatankuk@gmail.com">Email me <span class="button-arrow" aria-hidden="true">↗</span></a>
+          <a class="button button-secondary" href="https://www.linkedin.com/in/digitalmarketernisha-tank" target="_blank" rel="noreferrer">Connect on LinkedIn <span class="button-arrow" aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Nisha Tank. Designed to make an impression.</span>
+      <div class="footer-links"><a href="#top">Back to top ↑</a></div>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector('.menu-button');
+    const navLinks = document.querySelector('.nav-links');
+    function closeMenu() {
+      navLinks.classList.remove('open');
+      document.body.classList.remove('menu-open');
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.setAttribute('aria-label', 'Open menu');
+      menuButton.textContent = '☰';
+    }
+    menuButton.addEventListener('click', () => {
+      const opening = !navLinks.classList.contains('open');
+      navLinks.classList.toggle('open', opening);
+      document.body.classList.toggle('menu-open', opening);
+      menuButton.setAttribute('aria-expanded', String(opening));
+      menuButton.setAttribute('aria-label', opening ? 'Close menu' : 'Open menu');
+      menuButton.textContent = opening ? '×' : '☰';
+    });
+    navLinks.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+    document.querySelector('#year').textContent = new Date().getFullYear();
+
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const revealItems = document.querySelectorAll('.reveal');
+    if (reducedMotion || !('IntersectionObserver' in window)) {
+      revealItems.forEach((item) => item.classList.add('visible'));
+    } else {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: .12 });
+      revealItems.forEach((item) => revealObserver.observe(item));
+    }
+
+    const sections = [...document.querySelectorAll('main section[id]')];
+    const linksById = new Map([...document.querySelectorAll('.nav-links a[href^="#"]')].map((link) => [link.getAttribute('href').slice(1), link]));
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          document.querySelectorAll('.nav-links a').forEach((link) => link.classList.remove('active'));
+          const activeLink = linksById.get(entry.target.id);
+          if (activeLink) activeLink.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-35% 0px -55% 0px' });
+    sections.forEach((section) => sectionObserver.observe(section));
+  </script>
+</body>
+</html>
