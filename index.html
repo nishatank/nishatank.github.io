@@ -255,7 +255,7 @@
     .toolkit-spotlight p { margin-bottom: 0; color: rgba(255,255,255,.72); }
     .spotlight-tools {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(5, minmax(0, 1fr));
       gap: .65rem;
     }
     .spotlight-tool {
@@ -504,6 +504,7 @@
     .evidence-grid {
       display: grid;
       grid-template-columns: 1.3fr .7fr;
+      align-items: start;
       gap: 1rem;
       margin-bottom: 1rem;
     }
@@ -542,7 +543,8 @@
     .journey-card {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-start;
+      align-self: start;
       padding: 1.6rem;
       color: white;
       background: var(--navy);
@@ -622,7 +624,7 @@
     .creative-blog-dark .design-format { color: var(--teal); }
     .creative-blog-dark .brochure-proof { border: 1px solid rgba(255,255,255,.15); background: rgba(255,255,255,.06); }
     .radio-work-section { background: #f7efe5; }
-    .radio-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .radio-columns { display: grid; grid-template-columns: 1fr; gap: 1rem; }
     .radio-case {
       min-height: 100%;
       padding: clamp(1.3rem, 3vw, 2rem);
@@ -632,7 +634,7 @@
     }
     .radio-case h3 { margin-bottom: .55rem; font-family: var(--serif); font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 500; line-height: 1.03; }
     .radio-case > p { color: var(--ink-muted); }
-    .radio-case .audio-grid { grid-template-columns: 1fr; }
+    .radio-case .audio-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .radio-case--house { color: white; background: var(--navy); }
     .radio-case--house > p { color: rgba(255,255,255,.72); }
     .radio-station {
@@ -692,6 +694,15 @@
     .campaign-caption { display: flex; justify-content: space-between; gap: 1rem; padding: .85rem 1rem; font-size: .78rem; font-weight: 850; }
     .campaign-art-wrap { display: flex; flex-direction: column; }
     .campaign-art-wrap .campaign-art { flex: 1; }
+    .pos-additional-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .pos-additional-grid .campaign-art-wrap:first-child { grid-column: 1 / -1; }
+    .pos-additional-grid .campaign-art { aspect-ratio: 1.414 / 1; }
+    .pos-additional-grid .campaign-art img { object-fit: contain; }
     .campaign-role {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -751,21 +762,50 @@
     }
     .chapter-card:nth-child(2), .chapter-card:nth-child(3) { background: rgba(46,196,182,.1); }
     .chapter-company { display: flex; align-items: center; gap: .9rem; margin: .95rem 0 .65rem; }
-    .chapter-card .chapter-company h3 { margin: 0; }
+    .chapter-card .chapter-company h3 { min-width: 0; margin: 0; }
     .chapter-logo-shell {
-      width: 78px;
-      height: 54px;
+      position: relative;
+      width: 128px;
+      height: 68px;
       display: grid;
       place-items: center;
       flex: 0 0 auto;
       overflow: hidden;
-      padding: .4rem;
+      padding: .5rem;
       border-radius: .75rem;
       color: var(--navy);
       background: white;
     }
-    .chapter-logo { width: 100%; height: 100%; object-fit: contain; }
-    .chapter-wordmark { font-size: .75rem; font-weight: 900; letter-spacing: .08em; text-align: center; }
+    .chapter-logo {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+      object-fit: contain;
+    }
+    .chapter-logo--lsg {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 112px;
+      height: 112px;
+      max-width: none;
+      max-height: none;
+      transform: translate(-50%, -53%);
+    }
+    .chapter-logo--gaa {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 176px;
+      height: 176px;
+      max-width: none;
+      max-height: none;
+      transform: translate(-51.9%, -47.2%);
+    }
+    .chapter-logo--white-canvas { width: 52px; height: 52px; }
+    .chapter-wordmark { font-size: 1rem; font-weight: 900; letter-spacing: .12em; text-align: center; }
     .chapter-meta { color: var(--teal); font-size: .7rem; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
     .chapter-card h3 { margin: 1.5rem 0 .55rem; font-family: var(--serif); font-size: 1.8rem; font-weight: 500; }
     .chapter-card p { margin: 0; color: rgba(255,255,255,.7); font-size: .9rem; }
@@ -816,6 +856,20 @@
     .brand-card:nth-child(4) { background: var(--coral); }
     .brand-card:nth-child(5) { color: white; background: var(--navy-soft); }
     .brand-card:nth-child(6) { background: #d8ccf4; }
+    .brand-card--madan { grid-column: 1 / -1; min-height: 330px; color: white; background: #294d3f; }
+    .brand-card--madan h3 { max-width: 18ch; }
+    .brand-card--madan .brand-logo-shell {
+      width: min(100%, 520px);
+      height: 210px;
+      padding: 1rem;
+    }
+    .brand-card--madan .brand-logo {
+      width: auto;
+      height: auto;
+      max-width: 92%;
+      max-height: 92%;
+      object-fit: contain;
+    }
     .brand-card::after {
       content: "";
       position: absolute;
@@ -935,6 +989,17 @@
       font-weight: 500; line-height: .96; letter-spacing: -.04em;
     }
     .campaign-subtitle { margin-bottom: 1.1rem; color: var(--ink-muted); font-weight: 750; }
+    .campaign-highlight {
+      align-self: flex-start;
+      display: inline-flex;
+      margin: 0 0 1rem;
+      padding: .5rem .75rem;
+      border-radius: 999px;
+      color: var(--navy);
+      background: var(--gold);
+      font-size: .75rem;
+      font-weight: 900;
+    }
     .campaign-points { display: grid; gap: .72rem; margin: 0; padding: 0; list-style: none; }
     .campaign-points li { position: relative; padding-left: 1.35rem; color: var(--ink-muted); font-size: .92rem; line-height: 1.5; }
     .campaign-points li::before { content: "✦"; position: absolute; left: 0; color: var(--teal); }
@@ -966,11 +1031,23 @@
     .diamond-wide { grid-column: 1 / -1; aspect-ratio: 3.8 / 1; }
     .diamond-aparshakti { grid-column: 1 / -1; aspect-ratio: 2.25 / 1; }
     .diamond-editorial { aspect-ratio: 4 / 4.6; }
-    .symphony-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 1.15rem; }
-    .symphony-grid .campaign-feature { height: 100%; }
-    .symphony-grid .campaign-feature-grid { grid-template-columns: 1fr; height: 100%; }
-    .symphony-grid .campaign-media iframe { min-height: 330px; }
-    .campaign-mini-stack { display: grid; gap: 1.15rem; }
+    .symphony-grid { display: grid; grid-template-columns: 1fr; gap: 1.15rem; }
+    .symphony-grid .campaign-feature-grid {
+      grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr);
+      align-items: center;
+    }
+    .symphony-grid .campaign-media {
+      min-height: 0;
+      aspect-ratio: 16 / 9;
+      align-self: center;
+    }
+    .symphony-grid .campaign-media iframe {
+      height: 100%;
+      min-height: 0;
+      aspect-ratio: 16 / 9;
+    }
+    .campaign-mini-stack { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.15rem; }
+    .campaign-mini-stack .campaign-mini:first-child { grid-column: 1 / -1; }
     .campaign-mini {
       position: relative; overflow: hidden; padding: 1.55rem; border-radius: 1.45rem;
       color: white; background: var(--navy); isolation: isolate;
@@ -985,6 +1062,15 @@
     .campaign-mini p { margin: 0; color: inherit; opacity: .76; font-size: .88rem; line-height: 1.5; }
     .campaign-mini .campaign-proof-link { color: inherit; }
     .campaign-stat { display: inline-flex; margin-top: 1rem; padding: .45rem .65rem; border-radius: 999px; color: var(--navy); background: var(--gold); font-size: .75rem; font-weight: 900; }
+    .campaign-mini-media {
+      overflow: hidden;
+      margin: 0 0 1rem;
+      border-radius: 1rem;
+      background: rgba(255,255,255,.12);
+    }
+    .campaign-mini-media img { width: 100%; aspect-ratio: 1.35 / 1; object-fit: contain; }
+    .campaign-mini-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .45rem; }
+    .campaign-mini-gallery img { width: 100%; aspect-ratio: 1 / 1; object-fit: contain; background: white; }
 
     .ai-note {
       display: grid;
@@ -1204,8 +1290,10 @@
       box-shadow: 0 12px 30px rgba(11,31,51,.08);
     }
     .degree-accreditation img {
+      display: block;
       width: 100%;
-      max-height: 76px;
+      height: auto;
+      max-height: 90px;
       object-fit: contain;
       object-position: left center;
     }
@@ -1337,11 +1425,13 @@
       .portrait-stage { width: min(86vw, 470px); }
       .proof-grid { grid-template-columns: repeat(2, 1fr); }
       .toolkit-spotlight-grid { grid-template-columns: 1fr; }
+      .spotlight-tools { grid-template-columns: repeat(3, minmax(0, 1fr)); }
       .about-grid, .about-personal, .experience-grid, .credentials-grid { grid-template-columns: 1fr; }
       .about-photo { position: static; max-width: 520px; }
       .case-summary, .evidence-grid, .brands-intro, .campaign-head, .brand-contributions,
       .campaign-feature-grid, .diamond-head, .symphony-grid, .audio-showcase-head,
       .creative-blog-head, .radio-columns { grid-template-columns: 1fr; }
+      .symphony-grid .campaign-feature-grid { grid-template-columns: 1fr; }
       .campaign-feature.reverse .campaign-media { order: initial; }
       .campaign-media iframe { min-height: 360px; }
       .case-header { align-items: center; }
@@ -1371,12 +1461,19 @@
       .case-company-lockup { align-items: flex-start; flex-direction: column; }
       .case-number { font-size: 2.2rem; }
       .chapter-grid, .brand-grid { grid-template-columns: 1fr; }
+      .brand-card--madan { grid-column: auto; }
+      .brand-card--madan .brand-logo-shell { height: 170px; }
       .campaign-grid, .brochure-proof, .campaign-role, .audio-grid { grid-template-columns: 1fr; }
+      .campaign-mini-stack { grid-template-columns: 1fr; }
+      .campaign-mini-stack .campaign-mini:first-child { grid-column: auto; }
+      .pos-additional-grid { grid-template-columns: 1fr; }
+      .pos-additional-grid .campaign-art-wrap:first-child { grid-column: auto; }
       .design-preview-link { grid-template-columns: 1fr auto; }
       .diamond-gallery { grid-template-columns: 1fr; }
       .diamond-wide, .diamond-aparshakti { grid-column: auto; aspect-ratio: 4 / 2.2; }
       .diamond-editorial { aspect-ratio: 4 / 4.25; }
-      .campaign-media iframe, .symphony-grid .campaign-media iframe { min-height: 250px; }
+      .campaign-media iframe { min-height: 250px; }
+      .symphony-grid .campaign-media iframe { min-height: 0; }
       .campaign-art-wide, .campaign-art-portrait { aspect-ratio: 4 / 3; }
       .brochure-images img { min-height: 130px; }
       .tool-logo-wall { grid-template-columns: repeat(2, 1fr); }
@@ -1476,6 +1573,7 @@
           <a class="spotlight-tool" href="#toolkit"><img src="assets/tool-icons/capcut.png" alt=""><span>CapCut</span></a>
           <a class="spotlight-tool" href="#toolkit"><img src="assets/tool-icons/adobe-illustrator.svg" alt=""><span>Adobe Illustrator</span></a>
           <a class="spotlight-tool" href="#toolkit"><img src="assets/platform-icons/openai.svg" alt=""><span>ChatGPT</span></a>
+          <a class="spotlight-tool" href="#toolkit"><img src="assets/tool-icons/metricool.png" alt=""><span>Metricool</span></a>
         </div>
       </div>
     </section>
@@ -1540,7 +1638,7 @@
                 <img class="case-company-logo" src="assets/rutland-hall-logo.svg" alt="Rutland Hall Hotel and Spa logo">
                 <h3>Rutland Hall Hotel &amp; Spa</h3>
               </div>
-              <p class="case-role">Marketing &amp; PR Assistant · Hospitality marketing</p>
+              <p class="case-role">Marketing &amp; PR Assistant · Hospitality marketing · Oakham, UK</p>
             </div>
             <span class="case-number" aria-hidden="true">01</span>
           </header>
@@ -1552,7 +1650,7 @@
               <p>I translate campaign strategy into production-ready assets across copy, photography, video and design. I manage day-to-day creative output in Canva and CapCut, make working amendments in Adobe Illustrator, and brief specialist partners when a larger production requires external expertise.</p>
               <div class="case-tags" aria-label="Rutland Hall capabilities">
                 <span class="case-tag">Website journey</span>
-                <span class="case-tag">Menu design</span>
+                <span class="case-tag">Designing &amp; editing</span>
                 <span class="case-tag">Paid media</span>
                 <span class="case-tag">Email marketing</span>
                 <span class="case-tag">PR support</span>
@@ -1580,13 +1678,6 @@
                 <h3>More than one channel.</h3>
                 <p>I’m happiest when the work connects rather than sitting in separate boxes.</p>
               </div>
-              <ul class="journey-list">
-                <li>Web and campaign coordination</li>
-                <li>Guest-facing design and collateral</li>
-                <li>Social content and CapCut editing</li>
-                <li>Paid, email and PR support</li>
-                <li>Performance-informed improvements</li>
-              </ul>
             </aside>
           </div>
 
@@ -1603,31 +1694,31 @@
         <div class="chapter-grid">
           <article class="chapter-card reveal">
             <div>
-              <span class="chapter-meta">Nov 2024—Jan 2025 · Events</span>
-              <div class="chapter-company"><span class="chapter-logo-shell"><span class="chapter-wordmark">LSG</span></span><h3>Ladies Social Gathering</h3></div>
+              <span class="chapter-meta">Nov 2024—Jan 2025 · Events · London, UK</span>
+              <div class="chapter-company"><span class="chapter-logo-shell"><img class="chapter-logo chapter-logo--lsg" src="assets/company-logos/ladies-social-gathering-instagram.jpg" alt="Ladies Social Gathering wordmark from its Instagram profile"></span><h3>Ladies Social Gathering</h3></div>
               <p>Owned campaign planning and event marketing for a premium women’s community, coordinating venues, vendors and member communications while strengthening the organisation’s public visibility.</p>
             </div>
             <span class="chapter-result">Measured impact: +25% brand visibility</span>
           </article>
           <article class="chapter-card reveal">
             <div>
-              <span class="chapter-meta">Oct 2023—Apr 2024 · Education</span>
-              <div class="chapter-company"><span class="chapter-logo-shell"><img class="chapter-logo" src="assets/company-logos/global-alliance-academy.jpg" alt="Global Alliance Academy logo"></span><h3>Global Alliance Academy</h3></div>
+              <span class="chapter-meta">Oct 2023—Apr 2024 · Education · London, UK</span>
+              <div class="chapter-company"><span class="chapter-logo-shell"><img class="chapter-logo chapter-logo--gaa" src="assets/company-logos/global-alliance-academy.jpg" alt="Global Alliance Academy logo"></span><h3>Global Alliance Academy</h3></div>
               <p>Built and optimised a lead-generation programme combining organic social with more than 15 Google Ads campaigns, strengthening audience growth, engagement and qualified enquiries.</p>
             </div>
             <span class="chapter-result">Measured impact: +30% followers · +20% engagement · +30% leads</span>
           </article>
           <article class="chapter-card reveal">
             <div>
-              <span class="chapter-meta">Oct 2021—Jun 2023 · Agency · Mumbai</span>
-              <div class="chapter-company"><span class="chapter-logo-shell"><img class="chapter-logo" src="assets/company-logos/white-canvas.png" alt="White Canvas logo"></span><h3>White Canvas</h3></div>
+              <span class="chapter-meta">Oct 2021—Jun 2023 · Agency · Mumbai, India</span>
+              <div class="chapter-company"><span class="chapter-logo-shell"><img class="chapter-logo chapter-logo--white-canvas" src="assets/company-logos/white-canvas.png" alt="White Canvas logo"></span><h3>White Canvas</h3></div>
               <p>Managed B2B and B2C accounts across five social platforms, delivered every project on schedule and connected creative development with reporting, website updates and commercial performance.</p>
             </div>
             <span class="chapter-result">Measured impact: +25% campaign performance · +30% ROI · +25% conversions</span>
           </article>
           <article class="chapter-card reveal">
             <div>
-              <span class="chapter-meta">Sep 2020—Sep 2021 · Influencer marketing · Mumbai</span>
+              <span class="chapter-meta">Sep 2020—Sep 2021 · Influencer marketing · Mumbai, India</span>
               <div class="chapter-company"><span class="chapter-logo-shell"><span class="chapter-wordmark">ZAP</span></span><h3>Zap Creatives</h3></div>
               <p>Delivered social and influencer programmes across more than 15 client accounts, 10 celebrity shoots and 20 creator partnerships, coordinating talent, content and campaign delivery.</p>
             </div>
@@ -1642,36 +1733,57 @@
       <div class="container">
         <p class="section-kicker reveal">Designs &amp; editing work</p>
         <h2 class="section-title reveal">Creative work, organised by format.</h2>
-        <p class="section-intro reveal">A clearer view of the design contribution behind the campaigns: festive artwork for social and print, followed by brochure projects where I shaped content, structure and production.</p>
+        <p class="section-intro reveal">Point-of-sale artwork and brochure projects, with my contribution shown clearly beside the final creative.</p>
 
         <div class="creative-directory">
           <article class="creative-blog reveal">
             <div class="creative-blog-head">
               <div>
-                <span class="design-format">Festive artwork</span>
-                <h3>Christmas 2026 campaign designs</h3>
+                <span class="design-format">Point-of-sale artwork</span>
+                <h3>Christmas POS artwork</h3>
               </div>
-              <p>I created and adapted the artwork below, translating the festive proposition into practical creative for social channels and print while maintaining Rutland Hall’s visual identity.</p>
+              <p>A concise selection of Christmas 2026 point-of-sale designs created for digital and print promotion at Rutland Hall.</p>
             </div>
 
             <div class="campaign-grid">
               <div class="campaign-art-wrap">
                 <div class="campaign-art campaign-art-wide">
-                  <img src="assets/rutland-hall-christmas-party-nights.jpg" alt="Rutland Hall Christmas 2026 Festive Party Nights social artwork" loading="lazy" width="1800" height="1272">
+                  <img src="assets/rutland-hall-christmas-party-nights.jpg" alt="Rutland Hall Christmas 2026 Festive Party Nights point-of-sale artwork" loading="lazy" width="1800" height="1272">
                 </div>
-                <span class="campaign-caption"><span>Socials</span><b>Landscape campaign artwork</b></span>
+                <span class="campaign-caption"><span>Point of sale</span><b>Festive Party Nights</b></span>
               </div>
               <div class="campaign-art-wrap">
                 <div class="campaign-art campaign-art-portrait">
                   <img src="assets/rutland-hall-christmas-poster.jpg" alt="Christmas at Rutland Hall 2026 print advertisement" loading="lazy" width="1271" height="1800">
                 </div>
-                <span class="campaign-caption"><span>Print ads</span><b>Portrait poster</b></span>
+                <span class="campaign-caption"><span>Point of sale</span><b>Christmas poster</b></span>
+              </div>
+            </div>
+
+            <div class="pos-additional-grid" aria-label="Additional Christmas point-of-sale artwork">
+              <div class="campaign-art-wrap">
+                <div class="campaign-art">
+                  <img src="assets/rutland-hall-christmas-pos-afternoon-tea.jpg" alt="Rutland Hall Festive Afternoon Tea point-of-sale artwork" loading="lazy" width="2000" height="1414">
+                </div>
+                <span class="campaign-caption"><span>Point of sale</span><b>Festive Afternoon Tea</b></span>
+              </div>
+              <div class="campaign-art-wrap">
+                <div class="campaign-art">
+                  <img src="assets/rutland-hall-christmas-pos-gala-ball.jpg" alt="Rutland Hall New Year's Eve Gala Ball point-of-sale artwork" loading="lazy" width="2000" height="1414">
+                </div>
+                <span class="campaign-caption"><span>Point of sale</span><b>New Year’s Eve Gala Ball</b></span>
+              </div>
+              <div class="campaign-art-wrap">
+                <div class="campaign-art">
+                  <img src="assets/rutland-hall-christmas-pos-dining.jpg" alt="Rutland Hall festive lunches and dinners point-of-sale artwork" loading="lazy" width="2000" height="1414">
+                </div>
+                <span class="campaign-caption"><span>Point of sale</span><b>Festive Lunches &amp; Dinners</b></span>
               </div>
             </div>
 
             <div class="campaign-role">
               <div class="role-note"><strong>My design contribution</strong><span>Creative adaptation, layout, copy hierarchy, image selection, calls to action and final artwork production.</span></div>
-              <div class="role-note"><strong>Campaign rollout</strong><span>Artwork prepared across social, email, website, display and on-property promotion.</span></div>
+              <div class="role-note"><strong>POS applications</strong><span>Artwork prepared for on-property displays, printed collateral and supporting digital placements.</span></div>
             </div>
           </article>
 
@@ -1681,7 +1793,7 @@
                 <span class="design-format">Brochure designs</span>
                 <h3>Content, structure &amp; production</h3>
               </div>
-              <p>These were separate brochure projects. The brochure is shown on the left; my contribution and the final public proof sit on the right.</p>
+              <p>The brochure is shown on the left, with my content, imagery and production contribution explained alongside it.</p>
             </div>
 
             <div class="brochure-directory">
@@ -1692,7 +1804,7 @@
                 <div class="brochure-copy">
                   <p class="section-kicker">Christmas brochure</p>
                   <h4>Content structure and production coordination.</h4>
-                  <p>I wrote and structured the brochure content, managed the information flow and coordinated the external designer through feedback, amendments and final delivery.</p>
+                  <p>I planned the imagery and wrote all brochure content, shaping the structure and information flow before coordinating the external designer through feedback, amendments and final delivery.</p>
                   <a class="evidence-link" href="https://www.flipsnack.com/69B597BBDC9/rutland-hall-2026-digital-christmas-brochure" target="_blank" rel="noreferrer">Open Christmas brochure ↗</a>
                 </div>
               </div>
@@ -1719,13 +1831,13 @@
       <div class="container">
         <p class="section-kicker reveal">Radio &amp; audio work</p>
         <h2 class="section-title reveal">Campaign stories made to be heard.</h2>
-        <p class="section-intro reveal">Radio partnerships and completed audio assets now live together, separate from the visual campaign case studies.</p>
+        <p class="section-intro reveal">Completed radio assets presented separately from the visual campaign case studies.</p>
 
         <div class="radio-columns">
           <article class="radio-case reveal" aria-label="Rutland and Stamford Sound audio work samples">
             <span class="design-format">Rutland &amp; Stamford Sound</span>
-            <h3>Christmas radio collaboration</h3>
-            <p>Two completed Christmas radio spots supporting Rutland Hall’s festive campaign, available to play directly below.</p>
+            <h3>Christmas 2025 radio collaboration</h3>
+            <p>Two completed Christmas radio spots produced in 2025 to support Rutland Hall’s festive campaign.</p>
             <div class="audio-grid">
               <article class="audio-card">
                 <strong>Christmas radio spot 01</strong>
@@ -1746,16 +1858,6 @@
             </div>
           </article>
 
-          <article class="radio-case radio-case--house reveal">
-            <span class="design-format">The House of Diamondss</span>
-            <h3>93.5 FM partnership with RJ Rachana</h3>
-            <span class="radio-station">93.5 FM · RJ Rachana</span>
-            <p>I helped coordinate the radio partnership, including on-air segments and interviews that extended the campaign beyond visual and social channels.</p>
-            <a class="radio-video-link" href="https://www.instagram.com/thehouseofdiamondss/reels/" target="_blank" rel="noreferrer" aria-label="Open The House of Diamondss campaign videos on Instagram">
-              <img src="assets/campaigns/house-of-diamonds-editorial-wide.jpg" alt="The House of Diamondss jewellery campaign imagery" loading="lazy" width="1600" height="422">
-              <span class="radio-video-label"><span class="radio-play" aria-hidden="true">▶</span>View public campaign videos on Instagram ↗</span>
-            </a>
-          </article>
         </div>
       </div>
     </section>
@@ -1777,11 +1879,12 @@
               <div class="campaign-copy">
                 <span class="campaign-brandline">Wonder Cement · Integrated launch</span>
                 <h3>Farq Nazar Aayega</h3>
-                <p class="campaign-subtitle">“You’ll see the difference”</p>
+                <p class="campaign-subtitle"><em>Farq Nazar Aayega</em> translates from Hindi as “You’ll see the difference.”</p>
+                <span class="campaign-highlight">Brand ambassador · Legendary Bollywood actor Amitabh Bachchan</span>
                 <ul class="campaign-points">
-                  <li>Spearheaded pre-launch, launch and post-launch planning around Wonder Cement’s superior product quality.</li>
-                  <li>Secured Amitabh Bachchan as brand ambassador, strengthening campaign credibility and mass-market appeal.</li>
-                  <li>Collaborated with his team to align the creative message with the brand’s values and shape the final television commercial.</li>
+                  <li>Led end-to-end campaign planning across the pre-launch, launch and post-launch phases, positioning product quality as the central customer promise.</li>
+                  <li>Helped bring legendary Bollywood actor Amitabh Bachchan on board as brand ambassador, giving the campaign exceptional credibility and nationwide appeal.</li>
+                  <li>Coordinated closely with the actor’s team, the brand and creative partners to align the message, manage delivery and shape the final television commercial.</li>
                 </ul>
                 <a class="campaign-proof-link" href="https://youtu.be/MboPH7gpnXQ?si=z9aPDicu1lS_rAjm" target="_blank" rel="noreferrer">Open the commercial on YouTube ↗</a>
               </div>
@@ -1796,39 +1899,14 @@
               <div class="campaign-copy">
                 <span class="campaign-brandline">Wonder Cement · Film partnership</span>
                 <h3>Shabaash Mithu</h3>
-                <p class="campaign-subtitle">Building brand visibility through a culturally relevant partnership.</p>
+                <p class="campaign-subtitle">A film partnership featuring Bollywood actress Taapsee Pannu and celebrated cricketer Mithali Raj.</p>
                 <ul class="campaign-points">
-                  <li>Connected Wonder Cement with the Bollywood biopic starring Taapsee Pannu as Mithali Raj, including brand placement across jerseys and promotional assets.</li>
-                  <li>Coordinated announcements, interviews and an offline cricket activation with Taapsee Pannu and Mithali Raj across the launch journey.</li>
+                  <li>Coordinated Wonder Cement’s partnership with the Bollywood biopic, including prominent brand placement across team jerseys and promotional assets.</li>
+                  <li>Supported launch announcements, interviews and an offline cricket activation with Bollywood actress Taapsee Pannu and Mithali Raj.</li>
                   <li>Worked with creative and content teams on posters, banners and WhatsApp activity that linked the film’s resilience narrative to the brand.</li>
                 </ul>
                 <a class="campaign-proof-link" href="https://youtu.be/tP467dkxiX4?si=ApWKpXgnYzU4f1yF" target="_blank" rel="noreferrer">Watch the partnership video ↗</a>
               </div>
-            </div>
-          </article>
-
-          <p class="campaign-group-label reveal">The House of Diamondss</p>
-
-          <article class="campaign-feature diamond-case reveal">
-            <div class="diamond-head">
-              <div class="campaign-heading">
-                <span class="campaign-brandline">Purpose-led luxury campaign</span>
-                <h3>Wild in the Wild</h3>
-                <p class="campaign-subtitle">Jewellery storytelling in support of wildlife conservation, with a particular focus on elephants.</p>
-                <span class="campaign-outcome"><strong>+30%</strong> increase in sales</span>
-              </div>
-              <ul class="campaign-points">
-                <li>Orchestrated the campaign proposition and rollout around conservation-linked jewellery sales.</li>
-                <li>Supported brand photoshoots on set, coordinating jewellery and product placement across brand, client and talent teams.</li>
-                <li>Contributed to collaborations featuring Erica Fernandes, Aparshakti Khurana and Shruti Haasan.</li>
-              </ul>
-            </div>
-            <div class="diamond-gallery" aria-label="Wild in the Wild campaign imagery">
-              <figure class="diamond-wide"><img src="assets/campaigns/house-of-diamonds-editorial-wide.jpg" alt="The House of Diamondss green editorial jewellery campaign" loading="lazy" width="1600" height="422"></figure>
-              <figure class="diamond-aparshakti"><img src="assets/campaigns/house-of-diamonds-aparshakti.jpg" alt="Aparshakti Khurana collaboration for The House of Diamondss" loading="lazy" width="1600" height="710"></figure>
-              <figure class="diamond-editorial"><img src="assets/campaigns/house-of-diamonds-editorial-01.jpg" alt="The House of Diamondss celebrity jewellery editorial portrait" loading="lazy" width="1600" height="1592"></figure>
-              <figure class="diamond-editorial"><img src="assets/campaigns/house-of-diamonds-editorial-02.jpg" alt="The House of Diamondss silver fashion editorial" loading="lazy" width="1600" height="1340"></figure>
-              <figure class="diamond-editorial"><img src="assets/campaigns/house-of-diamonds-editorial-03.jpg" alt="The House of Diamondss jewellery campaign portrait" loading="lazy" width="1411" height="1600"></figure>
             </div>
           </article>
 
@@ -1843,10 +1921,10 @@
                 <div class="campaign-copy">
                   <span class="campaign-brandline">Symphony · Product campaign</span>
                   <h3>Papa Cool</h3>
-                  <p class="campaign-subtitle">Turning CFD technology into an accessible consumer story.</p>
+                  <p class="campaign-subtitle">Television commercial production for a technology-led consumer story.</p>
                   <ul class="campaign-points">
-                    <li>Managed the campaign across television creative and interactive social content.</li>
-                    <li>Helped communicate the product’s cooling technology through a clear, memorable campaign idea.</li>
+                    <li>Attended the television commercial shoot and coordinated across the brand, production and creative teams to keep delivery aligned with the campaign brief.</li>
+                    <li>Supported the wider rollout across television and interactive social content, translating the product’s CFD cooling technology into an accessible campaign idea.</li>
                   </ul>
                   <a class="campaign-proof-link" href="https://youtu.be/Ggn8h9MWVOU?si=DWgtijPlTEliaAoM" target="_blank" rel="noreferrer">Watch the TV commercial ↗</a>
                 </div>
@@ -1855,6 +1933,10 @@
 
             <div class="campaign-mini-stack">
               <article class="campaign-mini reveal">
+                <div class="campaign-mini-media campaign-mini-gallery" aria-label="Symphony Marvel and Disney air-cooler ranges">
+                  <img src="assets/campaigns/symphony-marvel-hero-range.jpg" alt="Symphony Marvel Hero Range air coolers" loading="lazy" width="1200" height="1200">
+                  <img src="assets/campaigns/symphony-disney-magical-range.jpg" alt="Symphony Disney Magical Range air coolers" loading="lazy" width="1200" height="1200">
+                </div>
                 <span class="campaign-brandline">Brand collaboration</span>
                 <h3>Marvel &amp; Disney × Symphony</h3>
                 <p>Managed the Hero and Magical range launch across pre-buzz video, interactive contests and coordinated social activity.</p>
@@ -1867,12 +1949,39 @@
                 <p>Coordinated social campaigns promoting nominations and celebrating sustainable, employee-focused MSMEs across India.</p>
               </article>
               <article class="campaign-mini reveal">
+                <div class="campaign-mini-media">
+                  <img src="assets/campaigns/symphony-bldc-cooler.png" alt="Symphony Winter 80B energy-saving BLDC air cooler" loading="lazy" width="801" height="801">
+                </div>
                 <span class="campaign-brandline">Technology launch</span>
                 <h3>First BLDC air-cooler range</h3>
                 <p>Built and managed social content calendars, monitored campaign performance and coordinated with the paid media team to optimise sponsored activity.</p>
               </article>
             </div>
           </div>
+
+          <p class="campaign-group-label reveal">The House of Diamondss</p>
+
+          <article class="campaign-feature diamond-case reveal">
+            <div class="diamond-head">
+              <div class="campaign-heading">
+                <span class="campaign-brandline">Celebrity brand shoots · Jewellery placement</span>
+                <h3>From product selection to on-set coordination.</h3>
+                <p class="campaign-subtitle">I helped connect brand-client jewellery with recognised screen talent and managed the details that enabled each shoot to run smoothly.</p>
+              </div>
+              <ul class="campaign-points">
+                <li>Coordinated jewellery product placement for client shoots, ensuring the selected pieces were prepared and aligned with each creative brief.</li>
+                <li>Attended the photoshoots and managed day-of coordination across the brand, clients, talent teams and production requirements.</li>
+                <li>Supported shoots featuring Bollywood actress Shruti Haasan, Bollywood actor Aparshakti Khurana and television actress Erica Fernandes.</li>
+              </ul>
+            </div>
+            <div class="diamond-gallery" aria-label="The House of Diamondss celebrity brand photoshoots">
+              <figure class="diamond-wide"><img src="assets/campaigns/house-of-diamonds-editorial-wide.jpg" alt="Jewellery styling for a House of Diamondss celebrity photoshoot" loading="lazy" width="1600" height="422"></figure>
+              <figure class="diamond-aparshakti"><img src="assets/campaigns/house-of-diamonds-aparshakti.jpg" alt="Bollywood actor Aparshakti Khurana wearing jewellery for The House of Diamondss" loading="lazy" width="1600" height="710"></figure>
+              <figure class="diamond-editorial"><img src="assets/campaigns/house-of-diamonds-editorial-01.jpg" alt="Celebrity jewellery product-placement photoshoot" loading="lazy" width="1600" height="1592"></figure>
+              <figure class="diamond-editorial"><img src="assets/campaigns/house-of-diamonds-editorial-02.jpg" alt="Celebrity jewellery product-placement photoshoot" loading="lazy" width="1600" height="1340"></figure>
+              <figure class="diamond-editorial"><img src="assets/campaigns/house-of-diamonds-editorial-03.jpg" alt="Celebrity jewellery editorial photoshoot" loading="lazy" width="1411" height="1600"></figure>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -1922,30 +2031,14 @@
               <div><span class="brand-logo-shell"><img class="brand-logo brand-logo--house" src="assets/company-logos/house-of-diamondss.jpg" alt="The House of Diamondss logo"></span><h3>The House of Diamondss</h3><p>Creative and audience-led brand experience within my earlier marketing journey.</p></div>
             </a>
           </article>
-        </div>
-
-        <div class="contribution-section-head reveal">
-          <p class="section-kicker">Selected brand contributions</p>
-          <h2 class="section-title">How I shaped the work behind the brand.</h2>
-        </div>
-        <div class="brand-contributions">
-          <article class="contribution-card reveal">
-            <div class="contribution-brand"><span class="contribution-logo-shell"><img class="contribution-logo" src="assets/company-logos/symphony.png" alt="Symphony Limited logo"></span><span>Symphony Limited</span></div>
-            <h3>Integrated consumer campaigns from launch strategy to reporting.</h3>
-            <div class="campaign-names">
-              <span class="campaign-name">Marvel × Disney</span>
-              <span class="campaign-name">Papa Cool</span>
-              <span class="campaign-name">Kal Ki Soch</span>
-            </div>
-            <p>I led day-to-day execution across launch planning, creative quality control, cross-channel rollout and performance reporting. Audience and campaign insights were used to optimise live activity and inform the next marketing direction.</p>
-          </article>
-          <article class="contribution-card reveal">
-            <div class="contribution-brand"><span class="contribution-logo-shell"><img class="contribution-logo contribution-logo--taj" src="assets/company-logos/taj-hotels.svg" alt="Taj Hotels logo"></span><span>Taj Amer, Jaipur</span></div>
-            <h3>Strengthening premium positioning for Taj Amer, Jaipur.</h3>
-            <p>I developed and refined campaign propositions, shaped creative concepts and managed brand-alignment reviews so every asset reflected Taj’s luxury codes and positioned the property consistently for a premium hospitality audience.</p>
+          <article class="brand-card brand-card--madan reveal">
+            <a class="brand-link" href="https://www.instagram.com/madanjewellersindia" target="_blank" rel="noreferrer">
+              <div class="brand-index"><span>07</span><span>Jewellery · Social strategy</span></div>
+              <div><span class="brand-logo-shell"><img class="brand-logo" src="assets/company-logos/madan-jewellers.png" alt="Madan Jewellers logo"></span><h3>Madan Jewellers</h3><p>Owned the brand’s end-to-end social media strategy, from content planning and creative direction to publishing, community coordination and performance-led improvement.</p></div>
+            </a>
           </article>
         </div>
-        <p class="brand-footnote reveal">A selection of the brands and campaigns from my experience. Brand links open the live public pages.</p>
+        <p class="brand-footnote reveal">A concise brand index. Detailed campaign contributions are presented above; each card opens the brand’s public page.</p>
       </div>
     </section>
 
@@ -2006,6 +2099,7 @@
             <article class="tool-tile reveal"><img class="tool-icon" src="assets/platform-icons/google-gemini.svg" alt="" loading="lazy"><span class="tool-name">Google Gemini</span></article>
             <article class="tool-tile reveal"><img class="tool-icon" src="assets/platform-icons/figma.svg" alt="" loading="lazy"><span class="tool-name">Figma</span></article>
             <article class="tool-tile reveal"><img class="tool-icon" src="assets/tool-icons/adobe-illustrator.svg" alt="" loading="lazy"><span class="tool-name">Adobe Illustrator</span></article>
+            <article class="tool-tile reveal"><img class="tool-icon" src="assets/tool-icons/metricool.png" alt="" loading="lazy"><span class="tool-name">Metricool</span></article>
           </div>
         </div>
 
@@ -2080,7 +2174,7 @@
               <p><strong>Oxford Brookes University</strong></p>
               <small>September 2023—September 2024</small>
               <div class="degree-accreditation" aria-label="Professional degree accreditation">
-                <img src="assets/oxford-brookes-degree-accreditation.png" alt="CIM Accredited Degree and Institute of Data and Marketing accreditation logos" loading="lazy" width="334" height="144">
+                <img src="assets/degree-accreditation-cim-idm.png" alt="CIM Accredited Degree and Institute of Data and Marketing accreditation logos" loading="lazy" width="334" height="144">
                 <div>
                   <strong>Professionally accredited degree</strong>
                   <span>Accredited by the Chartered Institute of Marketing (CIM) and the Institute of Data &amp; Marketing (IDM).</span>
